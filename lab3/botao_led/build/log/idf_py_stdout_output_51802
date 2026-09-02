@@ -1,0 +1,57 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/sis-emb-2026-bancada-07/sis-emb/lab3/botao_led/build/bootloader/esp-idf/esptool_py && /home/sis-emb-2026-bancada-07/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/sis-emb-2026-bancada-07/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/sis-emb-2026-bancada-07/sis-emb/lab3/botao_led/build/bootloader/bootloader.bin
+Bootloader binary size 0x6850 bytes. 0x7b0 bytes (7%) free.
+[2/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/botao_led.c.obj
+[3/10] No install step for 'bootloader'
+[4/10] Linking C static library esp-idf/main/libmain.a
+[5/10] Completed 'bootloader'
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable botao_led.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.12.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/sis-emb-2026-bancada-07/sis-emb/lab3/botao_led/build/botao_led.bin
+[9/10] cd /home/sis-emb-2026-bancada-07/sis-emb/lab3/botao_led/build/esp-idf/esptool_py && /home/sis-emb-2026-bancada-07/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/sis-emb-2026-bancada-07/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/sis-emb-2026-bancada-07/sis-emb/lab3/botao_led/build/partition_table/partition-table.bin /home/sis-emb-2026-bancada-07/sis-emb/lab3/botao_led/build/botao_led.bin
+botao_led.bin binary size 0x2da30 bytes. Smallest app partition is 0x100000 bytes. 0xd25d0 bytes (82%) free.
+[9/10] cd /home/sis-emb-2026-bancada-07/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/sis-emb-2026-bancada-07/esp/esp-idf -D "SERIAL_TOOL=/home/sis-emb-2026-bancada-07/.espressif/python_env/idf5.2_py3.12_env/bin/python;;/home/sis-emb-2026-bancada-07/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/sis-emb-2026-bancada-07/sis-emb/lab3/botao_led/build -P /home/sis-emb-2026-bancada-07/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 botao_led.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.12.0
+Serial port /dev/ttyUSB0
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: d4:e9:f4:68:cd:0c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x0003dfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26704 bytes to 16348...
+Writing at 0x00001000... (100 %)
+Wrote 26704 bytes (16348 compressed) at 0x00001000 in 0.7 seconds (effective 303.6 kbit/s)...
+Hash of data verified.
+Compressed 186928 bytes to 99406...
+Writing at 0x00010000... (14 %)
+Writing at 0x0001ca01... (28 %)
+Writing at 0x0002242d... (42 %)
+Writing at 0x00028152... (57 %)
+Writing at 0x0002f998... (71 %)
+Writing at 0x00036bb1... (85 %)
+Writing at 0x0003d31e... (100 %)
+Wrote 186928 bytes (99406 compressed) at 0x00010000 in 2.8 seconds (effective 540.7 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 749.7 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

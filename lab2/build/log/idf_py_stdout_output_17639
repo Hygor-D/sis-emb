@@ -1,0 +1,12 @@
+[0/1] cd /home/sis-emb-2026-bancada-07/sis-emb/lab2/build && /usr/bin/cmake -D "IDF_SIZE_TOOL=/home/sis-emb-2026-bancada-07/.espressif/python_env/idf5.2_py3.12_env/bin/python;-m;esp_idf_size" -D MAP_FILE=/home/sis-emb-2026-bancada-07/sis-emb/lab2/build/blink.map -D OUTPUT_JSON= -P /home/sis-emb-2026-bancada-07/esp/esp-idf/tools/cmake/run_size_tool.cmake
+Total sizes:
+Used static DRAM:   11028 bytes ( 169708 remain, 6.1% used)
+      .data size:    8788 bytes
+      .bss  size:    2240 bytes
+Used static IRAM:   50970 bytes (  80102 remain, 38.9% used)
+      .text size:   49943 bytes
+   .vectors size:    1027 bytes
+Used Flash size :  124719 bytes
+           .text:   83827 bytes
+         .rodata:   40636 bytes
+Total image size:  184477 bytes (.bin may be padded larger)

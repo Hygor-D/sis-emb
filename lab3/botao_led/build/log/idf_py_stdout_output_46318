@@ -1,0 +1,117 @@
+b�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15532
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (29) boot: ESP-IDF v5.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 26 2026 15:41:59[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v3.1[0m
+[0;32mI (37) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (60) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (67) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (75) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (82) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (90) boot: End of partition table[0m
+[0;32mI (94) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a0d4h ( 41172) map[0m
+[0;32mI (116) esp_image: segment 1: paddr=0001a0fc vaddr=3ffb0000 size=02254h (  8788) load[0m
+[0;32mI (120) esp_image: segment 2: paddr=0001c358 vaddr=40080000 size=03cc0h ( 15552) load[0m
+[0;32mI (128) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14b90h ( 84880) map[0m
+[0;32mI (160) esp_image: segment 4: paddr=00034bb8 vaddr=40083cc0 size=08e40h ( 36416) load[0m
+[0;32mI (181) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (181) boot: Disabling RNG early entropy source...[0m
+[0;32mI (192) cpu_start: Multicore app[0m
+[0;32mI (201) cpu_start: Pro cpu start user code[0m
+[0;32mI (201) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (201) cpu_start: Application information:[0m
+[0;32mI (204) cpu_start: Project name:     botao_led[0m
+[0;32mI (209) cpu_start: App version:      1[0m
+[0;32mI (214) cpu_start: Compile time:     Aug 26 2026 15:41:53[0m
+[0;32mI (220) cpu_start: ELF file SHA256:  9c9d35989...[0m
+[0;32mI (225) cpu_start: ESP-IDF:          v5.2[0m
+[0;32mI (230) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (234) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (239) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (244) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (251) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (257) heap_init: At 3FFB2B18 len 0002D4E8 (181 KiB): DRAM[0m
+[0;32mI (264) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (270) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 4008CB00 len 00013500 (77 KiB): IRAM[0m
+[0;32mI (284) spi_flash: detected chip: generic[0m
+[0;32mI (287) spi_flash: flash io: dio[0m
+[0;33mW (291) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (305) main_task: Started on CPU0[0m
+[0;32mI (315) main_task: Calling app_main()[0m
+[0;32mI (315) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (315) gpio: GPIO[0]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+borda total #1
+borda total #3
+borda total #5
+borda total #7
+borda total #9
+borda total #11
+borda total #13
+borda total #14
+borda total #16
+borda total #18
+borda total #19
+borda total #20
+borda total #22
+borda total #24
+borda total #25
+borda total #27
+borda total #29
+borda total #31
+borda total #33
+borda total #35
+borda total #37
+borda total #38
+borda total #40
+borda total #42
+borda total #44
+borda total #46
+borda total #48
+borda total #50
+borda total #52
+borda total #54
+borda total #56
+borda total #58
+borda total #60
+borda total #62
+borda total #64
+borda total #65
+borda total #66
+borda total #69
+borda total #70
+borda total #71
+borda total #73
+borda total #75
+borda total #77
+borda total #79
+borda total #81
+borda total #83
+borda total #85
+borda total #87
+borda total #88
+borda total #91
+borda total #93
+borda total #96
+borda total #98
+borda total #100
+borda total #101
+borda total #103
+borda total #104
+borda total #106
+borda total #108
+borda total #109
