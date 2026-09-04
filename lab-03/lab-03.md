@@ -1,0 +1,434 @@
+# Lab 3 — GPIO de entrada e saída + o experimento do bouncing
+
+> **Antes de começar**: leia a [teoria-03](teoria-03.md) — a seção 2.5 detalha o firmware de
+> hoje linha a linha, e as Figuras 3-C/3-D mostram exatamente os circuitos que você montará.
+
+**Objetivo**: montar o circuito LED + botão; entender o firmware de polling com debounce;
+**medir o bouncing do seu botão** variando a janela de debounce e concluir o valor ideal.
+
+**Duração**: 2 aulas.
+**Material**: ESP32, protoboard, LED + resistor 220 Ω, botão táctil, resistor 10 kΩ (parte
+D), jumpers.
+
+---
+
+## Parte 0 — Sincronize o repositório
+
+```bash
+cd ~/sis-emb-2026-2 && git fetch && git reset --hard origin/main
+```
+
+## Parte A — Primeiro no Wokwi (25 min)
+
+Como sempre no Bloco 1: **simule antes de gravar**.
+
+1. Abra um novo projeto ESP32/ESP-IDF no Wokwi e cole o código abaixo, cuja versão mais atualizada está em `~/sis-emb-2026-2/semana-03/src/botao_led/main.c`
+   (detalhado na seção 2.4 da teoria — leia antes!).
+
+```c
+// Semana 3 — botão com pull-up interno + debounce por software (polling)
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "driver/gpio.h"
+#include "esp_timer.h"
+#include <stdio.h>
+
+#define LED   GPIO_NUM_2
+#define BTN   GPIO_NUM_0
+#define DEBOUNCE_MS 20
+
+void app_main(void)
+{
+    gpio_reset_pin(LED);
+    gpio_set_direction(LED, GPIO_MODE_OUTPUT);
+
+    gpio_reset_pin(BTN);
+    gpio_set_direction(BTN, GPIO_MODE_INPUT);
+    gpio_pullup_en(BTN);              // repouso = 1; pressionado = 0
+
+    int  led = 0, eventos = 0;
+    int  nivel_ant = 1;
+    int64_t t_ok = 0;                 // instante a partir do qual aceitamos nova borda
+
+    while (1) {
+        int nivel = gpio_get_level(BTN);
+        int64_t agora = esp_timer_get_time() / 1000;      // ms
+        if (nivel_ant == 1 && nivel == 0 && agora >= t_ok) {  // borda de descida válida
+            led = !led;
+            gpio_set_level(LED, led);
+            printf("evento #%d\n", ++eventos);
+            t_ok = agora + DEBOUNCE_MS;
+        }
+        nivel_ant = nivel;
+        // Garantir pelo menos 1 tick no padrão de 100Hz do ESP-IDF
+        vTaskDelay(pdMS_TO_TICKS(10));
+    }
+}
+```   
+2. Circuito: LED no **D2** via resistor de 220 Ω (como no Lab 1) + `wokwi-pushbutton` entre
+   **D0** e **GND**. Não adicione resistor no botão: o código habilita o **pull-up interno**.
+
+![](https://raw.githubusercontent.com/fabiobento/sis-emb-2026-2/main/assets/figuras/lab-03.png)
+
+- Se quiser pode montar o circuito com o diagrama.json abaixo ou acessar o projeto Wokwi: [Lab-03-parte-a](https://wokwi.com/projects/473268920512424961).
+```json
+{
+  "version": 1,
+  "author": "Fabio Bento",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": -38.4,
+      "left": -33.56,
+      "attrs": { "builder": "esp-idf" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 82.8,
+      "left": 90.6,
+      "attrs": { "color": "red", "flip": "1" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 119.45,
+      "left": 133,
+      "rotate": 180,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-pushbutton-6mm",
+      "id": "btn1",
+      "top": 30.6,
+      "left": 131.2,
+      "rotate": 270,
+      "attrs": { "color": "green", "xray": "1" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "led1:A", "esp:2", "green", [ "v0" ] ],
+    [ "led1:C", "r1:2", "green", [ "v0" ] ],
+    [ "r1:1", "esp:GND.2", "green", [ "v0" ] ],
+    [ "btn1:2.l", "esp:GND.2", "green", [ "h38.8", "v-67.2" ] ],
+    [ "btn1:1.l", "esp:0", "green", [ "h-48", "v57.6", "h-19.2" ] ]
+  ],
+  "dependencies": {}
+}
+```
+
+3. Rode a simulação: cada clique deve alternar o LED e imprimir `evento #N` no monitor.
+4. **Verifique**: no Wokwi, clique e *segure* o botão. Por que o LED não fica
+   alternando enquanto seguro? Localize no código a linha responsável e anote (é a detecção
+   de borda — relatório, questão 1).
+
+> 🧠 **A resposta (não leia antes de pensar!)**: a condição
+> `nivel_ant == 1 && nivel == 0` só é verdadeira **no instante da transição**. Com o botão
+> seguro, `nivel` fica 0 e `nivel_ant` também — a condição nunca mais se cumpre. Borda é
+> evento; nível é estado. É o mesmo princípio que diferencia "a porta abriu" de "a porta
+> está aberta".
+
+> OBSERVAÇÃO: o Wokwi simula o pull-up interno do ESP32, então não há resistor externo no botão.
+![Diagrama do botão com pull-up interno do ESP32: LED no GPIO2 e botão entre GPIO0 e GND](https://raw.githubusercontent.com/fabiobento/sis-emb-2026-2/main/assets/figuras/botao_pullup-esp32.png)
+
+*Figura L3-A — A montagem do lab no ESP32: o LED (com R220) no GPIO2 e o botão entre GPIO0 e GND.
+O pull-up é o **interno** do chip (`gpio_pullup_en`), então não há resistor externo — em repouso o
+GPIO0 lê 1 e, pressionado, lê 0.*
+
+> **Observação:** o GPIO 0 é também o pino de *boot* da placa (o botão "BOOT" embutido está
+> ligado nele!). Vantagem didática: você pode testar o firmware **sem botão externo**,
+> usando o BOOT da própria placa. Cuidado colateral: se o botão estiver pressionado durante
+> um reset, a placa entra em modo de gravação — solte e resete de novo.
+
+## Parte B — Hardware (25 min)
+
+5. Monte o mesmo circuito na protoboard: LED→R220→GPIO2; botão entre **GPIO0 e GND**.
+
+![](https://raw.githubusercontent.com/fabiobento/sis-emb-2026-2/main/assets/figuras/lab-03-hard.png)
+
+6. **Crie o projeto via CLI**: no terminal, com o ambiente do ESP-IDF ativado, navegue até a pasta de trabalho desejada e inicie um novo projeto chamado `botao_led`:
+```bash
+mkdir ~/sis-emb/lab3
+cd ~/sis-emb/lab3
+idf.py create-project botao_led
+```
+
+
+7. Entre na pasta criada (`cd botao_led`):
+```bash
+cd botao_led
+```
+Em seguida abra o arquivo `~/home/fabio~/sis-emb/lab3/botao_led/main/botao_led.c` no seu editor de código e **substitua todo o conteúdo** pelo código em C que você utilizou e simulou na Parte A.
+
+> 💭 **Por que não usamos `idf.py menuconfig` aqui?** Na Semana 2, o exemplo `blink` vinha
+> pronto com opções de configuração (`CONFIG_BLINK_GPIO` etc.) porque a Espressif escreveu um
+> arquivo especial (`Kconfig.projbuild`) declarando essas opções. O projeto `botao_led` que
+> você acabou de criar com `idf.py create-project` é "vazio" — não tem esse arquivo, então não
+> há nada extra para aparecer no `menuconfig` além dos padrões do ESP-IDF já explorados na
+> Semana 2. Por isso `LED`, `BTN` e `DEBOUNCE_MS` são simples `#define` fixos direto no
+> código: a partir de agora, ajustar o firmware significa editar o `.c`, não navegar em
+> menus — é exatamente o que você vai fazer na Parte D.
+
+8. Compile, grave o firmware na placa e abra o monitor serial em um único comando. Confirme se o comportamento físico é o mesmo do simulador:
+```bash
+idf.py -p /dev/ttyUSB0 flash monitor 
+
+```
+
+## Parte C — O experimento do bouncing (40 min)
+
+Este é o coração do lab: **quantificar** o fenômeno do Exemplo resolvido 3.3 no *seu*
+botão. Lembre da figura da teoria: os contatos metálicos quicam por 1–10 ms antes de
+assentar, gerando uma rajada de bordas. Hoje vocês medirão a rajada.
+
+> 🆕 **Um conceito novo: interrupção de hardware**
+>
+> Até agora, todo firmware do curso funcionou por **polling**: o `while(1)` fica perguntando
+> repetidamente "qual o nível do pino agora?", numa certa cadência. Isso tem um limite físico
+> — se o pino muda de estado *mais rápido* do que a cadência das suas perguntas, você perde
+> transições.
+>
+> A alternativa de hoje é a **interrupção**: em vez de a CPU perguntar, é o **próprio
+> hardware do ESP32** que avisa a CPU, imediatamente, toda vez que o pino muda de nível —
+> não importa o quão rápido. Pense na diferença entre checar a caixa de correio a cada hora
+> (polling) e ter uma campainha que toca sozinha assim que a carta chega (interrupção). A
+> campainha não perde carta nenhuma, mesmo que cheguem várias em sequência rápida.
+>
+> Vocês ainda não estudaram interrupções formalmente (isso vem mais à frente no curso) —
+> aqui o objetivo é só *usar* essa ferramenta para o experimento funcionar corretamente.
+> Comentários no código explicam cada parte nova.
+
+9. Agora o firmware vai contar **todas** as bordas, sem filtro.
+Para isso substitua o códigoda parte A pelo  seguinte:
+```c
+// Semana 3 — botão com pull-up interno + captura de bouncing via interrupção (ANYEDGE)
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "freertos/queue.h"
+#include "driver/gpio.h"
+#include "esp_timer.h"
+#include <stdio.h>
+
+#define LED   GPIO_NUM_2
+#define BTN   GPIO_NUM_0
+#define DEBOUNCE_MS 0   // ainda existe, mas agora filtrado dentro da ISR
+
+static QueueHandle_t fila_bordas;
+
+// ISR: roda em contexto de interrupção — deve ser curta, sem printf,
+// sem alocação, sem chamadas bloqueantes.
+static void IRAM_ATTR isr_botao(void *arg)
+{
+    int nivel = gpio_get_level(BTN);
+    int64_t agora_us = esp_timer_get_time();
+
+    // Empacota nível + timestamp e manda para a fila.
+    // xQueueSendFromISR é a versão segura para uso dentro de ISR.
+    struct { int nivel; int64_t t_us; } msg = { nivel, agora_us };
+    BaseType_t acordou_task_maior_prioridade = pdFALSE;
+    xQueueSendFromISR(fila_bordas, &msg, &acordou_task_maior_prioridade);
+    if (acordou_task_maior_prioridade) {
+        portYIELD_FROM_ISR();
+    }
+}
+
+void app_main(void)
+{
+    gpio_reset_pin(LED);
+    gpio_set_direction(LED, GPIO_MODE_OUTPUT);
+
+    gpio_reset_pin(BTN);
+    gpio_set_direction(BTN, GPIO_MODE_INPUT);
+    gpio_pullup_en(BTN);
+    gpio_set_intr_type(BTN, GPIO_INTR_ANYEDGE);   // dispara em subida E descida
+
+    fila_bordas = xQueueCreate(64, sizeof(struct { int nivel; int64_t t_us; }));
+
+    gpio_install_isr_service(0);
+    gpio_isr_handler_add(BTN, isr_botao, NULL);
+
+    int led = 0, bordas_totais = 0;
+    int64_t t_ok_us = 0;   // instante (us) a partir do qual aceitamos novo evento válido
+
+    struct { int nivel; int64_t t_us; } msg;
+
+    while (1) {
+        // Bloqueia aqui até a ISR enfileirar uma borda — sem polling.
+        if (xQueueReceive(fila_bordas, &msg, portMAX_DELAY)) {
+            bordas_totais++;   // TODA borda física, incluindo bounce
+
+            // Só conta "evento" (clique válido) na descida (1->0) e fora
+            // da janela de debounce — igual à lógica original, mas agora
+            // aplicada sobre bordas reais, não sobre amostras periódicas.
+            if (msg.nivel == 0 && msg.t_us >= t_ok_us) {
+                led = !led;
+                gpio_set_level(LED, led);
+                printf("borda total #%d\n", bordas_totais);
+                t_ok_us = msg.t_us + (DEBOUNCE_MS * 1000);
+            }
+        }
+    }
+}
+```
+
+- Se quiser ver a simulação do circuito no Wokwi acesse [Lab-03-parte-c](https://wokwi.com/projects/473906771287636993).
+
+> 🔍 **Entendendo o código acima, por partes**
+>
+> **1. `GPIO_INTR_ANYEDGE`** — configura o pino para gerar uma interrupção em **qualquer**
+> mudança de nível: tanto 1→0 quanto 0→1. É isso que permite capturar cada "quique" do
+> bounce, e não só a transição final.
+>
+> **2. A função `isr_botao`** é chamada automaticamente pelo hardware toda vez que o pino
+> muda — é a "campainha" da analogia acima. Ela é chamada de **ISR** (*Interrupt Service
+> Routine*, rotina de serviço de interrupção). Uma ISR tem uma regra rígida: precisa ser
+> **muito rápida** e não pode fazer nada "pesado" — nada de `printf`, nada de esperar, nada
+> que possa travar. Por isso ela só faz o mínimo: lê o nível do pino, pega o instante exato
+> (`esp_timer_get_time()`) e **guarda esses dois dados numa fila** (`xQueueSendFromISR`),
+> devolvendo o controle da CPU imediatamente.
+>
+> **3. A fila (`fila_bordas`)** é a ponte entre a ISR (rápida, restrita) e o resto do
+> programa (`app_main`, que roda normalmente). A ISR só deposita o evento na fila; quem
+> efetivamente processa é o `while(1)` do `app_main`, com `xQueueReceive`. Diferente do
+> polling de antes, aqui o `while(1)` **fica dormindo** (não gasta CPU) até a fila receber
+> algo — só "acorda" quando uma borda de verdade acontece.
+>
+> **4. O "contador de quiques"**:
+> - `bordas_totais` conta **toda** transição capturada pela interrupção — inclusive as
+>   várias bordas geradas pelo bounce de um único clique. É esse número que revela o
+>   fenômeno na prática.
+>
+> Na prática: pressione o botão uma vez e observe `bordas_totais` no print — se ele saltar
+> vários números para um único clique (ex.: de 3 para 11), você está vendo o bounce
+> diretamente, sem depender de a taxa de amostragem ter tido sorte de "flagrar" a rajada.
+10. Pressione o botão **10 vezes**, com firmeza normal, e anote o total de `borda total #N`
+   impressos. Se deu mais que 10, você acabou de *ver* o bouncing.
+11. Repita o procedimento para as janelas **5, 20 e 50 ms**, preenchendo: 
+
+| DEBOUNCE_MS | eventos por 10 pressionadas | eventos "fantasma" |
+|---|---|---|
+| 0 | | |
+| 5 | | |
+| 20 | | |
+| 50 | | |
+
+> **Observação:** botões diferentes "quicam" diferente — inclusive entre unidades do mesmo
+> lote. Compare sua tabela com a da bancada vizinha. Em produto real, dimensiona-se pela
+> *pior* unidade (e mede-se com osciloscópio — *Molloy*, Fig. 4-21, mostra um bouncing real
+> capturado: uma serra de ~5 ms antes do nível estabilizar).
+
+## Parte D — Invertendo a lógica: pull-down externo (30 min)
+
+> ⚠️ **Por que trocamos de GPIO0 para GPIO4 nesta parte:** o GPIO0 é o **pino de boot** do
+> ESP32 — a cada reset, o chip lê o nível desse pino para decidir como iniciar. Nível 1 (ou
+> flutuando) → boot normal, roda seu firmware. Nível 0 → o chip entende que deve entrar em
+> **modo de gravação**. Um pull-down (interno ou externo) deixa o GPIO0 em 0 *o tempo todo*
+> em repouso — inclusive durante o reset — então o chip fica preso tentando entrar em modo de
+> gravação em vez de rodar seu programa (sintoma típico: o LED trava aceso ou apagado logo no
+> início, e nenhum `evento #N` novo aparece, não importa quantas vezes você clique). Nas
+> Partes A/B/C isso nunca apareceu porque pull-up deixa o repouso em 1, compatível com o boot
+> normal. Por isso, a partir de agora usamos **GPIO4** — um pino livre, sem função especial de
+> boot — para o botão.
+
+12. Desmonte o botão e remonte com **pull-down externo**: GPIO4 → botão → **3V3**, e um
+    resistor de **10 kΩ** do GPIO4 ao **GND** (Revise o desenho da [Figura 3-C da teoria](https://raw.githubusercontent.com/fabiobento/sis-emb-2026-2/main/assets/figuras/pullup_pulldown.png) ao
+    lado, adaptando ao pino). 
+![](https://raw.githubusercontent.com/fabiobento/sis-emb-2026-2/main/assets/figuras/lab-03-hard-pulldown-protoboard.png)    
+![](https://raw.githubusercontent.com/fabiobento/sis-emb-2026-2/main/assets/figuras/lab-03-hard-pulldown-schematics.png) 
+13. Volte ao código de **polling** da Parte A/B (não à versão com interrupção da Parte C —
+    aquela serviu só para *demonstrar* o bouncing; aqui você já sabe que ele existe e vai
+    trabalhar com debounce normalmente). Ajuste o firmware (4 mudanças): troque o botão para
+    o **GPIO4** (`#define BTN GPIO_NUM_4`), desabilite o pull-up interno (`gpio_pullup_dis`),
+    habilite `gpio_pulldown_dis` também (queremos só o externo) e **inverta a detecção de
+    borda** — agora o repouso é 0 e o acionamento é a borda **0→1**
+    (`nivel_ant == 0 && nivel == 1`).
+
+```c
+// Semana 3 — botão com pull-down externo + debounce por software (polling)
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "driver/gpio.h"
+#include "esp_timer.h"
+#include <stdio.h>
+
+#define LED   GPIO_NUM_2
+#define BTN   GPIO_NUM_4    // Mudança 1: GPIO0 é o pino de boot — não use pull-down nele
+#define DEBOUNCE_MS 20
+
+void app_main(void)
+{
+    gpio_reset_pin(LED);
+    gpio_set_direction(LED, GPIO_MODE_OUTPUT);
+
+    gpio_reset_pin(BTN);
+    gpio_set_direction(BTN, GPIO_MODE_INPUT);
+    gpio_pullup_dis(BTN);             // Mudança 2: desabilita o pull-up interno
+    gpio_pulldown_dis(BTN);           // Mudança 3: desabilita o pull-down interno também
+                                       // (queremos só o resistor de 10 kΩ externo)
+                                       // repouso = 0; pressionado = 1
+
+    int  led = 0, eventos = 0;
+    int  nivel_ant = 0;                // repouso agora é 0 (antes era 1)
+    int64_t t_ok = 0;                 // instante a partir do qual aceitamos nova borda
+
+    while (1) {
+        int nivel = gpio_get_level(BTN);
+        int64_t agora = esp_timer_get_time() / 1000;      // ms
+        if (nivel_ant == 0 && nivel == 1 && agora >= t_ok) {  // Mudança 4: borda de subida válida
+            led = !led;
+            gpio_set_level(LED, led);
+            printf("evento #%d\n", ++eventos);
+            t_ok = agora + DEBOUNCE_MS;
+        }
+        nivel_ant = nivel;
+        // Garantir pelo menos 1 tick no padrão de 100Hz do ESP-IDF
+        vTaskDelay(pdMS_TO_TICKS(10));
+    }
+}
+```
+
+- Se quiser ver a simulação do circuito no Wokwi acesse [Lab-03-parte-d](https://wokwi.com/projects/473966100704939009) — o diagrama é o mesmo da Figura 3-C da teoria, só que com GPIO4 no lugar do GPIO0.
+
+
+14. Valide: mesmo comportamento externo, lógica interna invertida ("ativo-alto").
+
+> **Por que este exercício existe**: para você sentir que pull-up e pull-down são
+> **escolhas**, não leis da física — e que a escolha muda três coisas acopladas: o circuito,
+> o nível de repouso e a borda do evento. Confundir essa trindade é a origem do clássico
+> "meu botão funciona ao contrário".
+>
+> **Por que voltamos ao polling aqui:** a interrupção da Parte C existiu só para *revelar* o
+> bouncing (capturar cada quique, sem depender da taxa de amostragem). Agora que você já viu
+> o fenômeno e mediu a janela ideal de debounce, o firmware volta ao polling — mais simples de
+> ler — para focar no que muda de fato entre pull-up e pull-down: o circuito, o nível de
+> repouso e a borda do evento.
+
+---
+
+## 🛠️ Problemas comuns
+
+| Sintoma | Causa provável | Remédio |
+|---|---|---|
+| LED acende sozinho / conta sem clique | entrada flutuando (pull-up não habilitado) | confira `gpio_pullup_en(BTN)` |
+| Conta 2× por clique mesmo com 20 ms | janela medida errada / código antigo | regrave após editar; confira `DEBOUNCE_MS` |
+| Placa entra em modo de gravação | GPIO0 pressionado no reset | solte o botão e resete |
+| Nada acontece no clique | botão em fileira errada da protoboard | botão táctil tem os pares ligados em cruz — gire 90° |
+
+## Entrega (GitHub da bancada, `lab-03/relatorio.md`)
+
+1. Resposta da Parte A.4: qual condição do código impede repetição com o botão seguro?
+2. Tabela do experimento C completa + conclusão sobre a janela ideal (Parte C.11).
+3. *Diff* das três mudanças da Parte D (pode ser print do código com as linhas destacadas).
+4. Foto da montagem final (pull-down) com o resistor de 10 kΩ visível.
+
+## Desafio
+
+
+Clique simples × clique duplo: modifique o firmware para distinguir 1 clique (alterna o LED)
+de 2 cliques em até 400 ms (pisca o LED 3× rápido). Dica: ao detectar um clique, em vez de
+agir na hora, aguarde 400 ms observando se vem o segundo.
+
