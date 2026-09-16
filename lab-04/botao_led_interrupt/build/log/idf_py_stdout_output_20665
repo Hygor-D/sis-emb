@@ -1,0 +1,100 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15532
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (29) boot: ESP-IDF v5.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 16 2026 15:12:48[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v3.1[0m
+[0;32mI (37) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (60) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (67) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (75) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (82) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (90) boot: End of partition table[0m
+[0;32mI (94) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a0c4h ( 41156) map[0m
+[0;32mI (116) esp_image: segment 1: paddr=0001a0ec vaddr=3ffb0000 size=02254h (  8788) load[0m
+[0;32mI (120) esp_image: segment 2: paddr=0001c348 vaddr=40080000 size=03cd0h ( 15568) load[0m
+[0;32mI (128) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14c10h ( 85008) map[0m
+[0;32mI (160) esp_image: segment 4: paddr=00034c38 vaddr=40083cd0 size=08cf8h ( 36088) load[0m
+[0;32mI (181) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (181) boot: Disabling RNG early entropy source...[0m
+[0;32mI (192) cpu_start: Multicore app[0m
+[0;32mI (201) cpu_start: Pro cpu start user code[0m
+[0;32mI (201) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (201) cpu_start: Application information:[0m
+[0;32mI (204) cpu_start: Project name:     botao_led_interrupt[0m
+[0;32mI (210) cpu_start: App version:      cc555d6-dirty[0m
+[0;32mI (215) cpu_start: Compile time:     Sep 16 2026 15:12:41[0m
+[0;32mI (222) cpu_start: ELF file SHA256:  19d942d40...[0m
+[0;32mI (227) cpu_start: ESP-IDF:          v5.2[0m
+[0;32mI (232) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (236) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (241) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (246) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (253) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (259) heap_init: At 3FFB2B30 len 0002D4D0 (181 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (272) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (278) heap_init: At 4008C9C8 len 00013638 (77 KiB): IRAM[0m
+[0;32mI (286) spi_flash: detected chip: generic[0m
+[0;32mI (289) spi_flash: flash io: dio[0m
+[0;33mW (293) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (307) main_task: Started on CPU0[0m
+[0;32mI (317) main_task: Calling app_main()[0m
+[0;32mI (317) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (317) gpio: GPIO[4]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+evento #1 | latencia ate a tarefa: 1508 us
+evento #2 | latencia ate a tarefa: 2832 us
+evento #3 | latencia ate a tarefa: 1240 us
+evento #4 | latencia ate a tarefa: 3841 us
+evento #5 | latencia ate a tarefa: 6220 us
+evento #6 | latencia ate a tarefa: 2502 us
+evento #7 | latencia ate a tarefa: 5670 us
+evento #8 | latencia ate a tarefa: 9233 us
+evento #9 | latencia ate a tarefa: 5191 us
+evento #10 | latencia ate a tarefa: 2413 us
+evento #11 | latencia ate a tarefa: 1691 us
+evento #12 | latencia ate a tarefa: 330 us
+evento #13 | latencia ate a tarefa: 2909 us
+evento #14 | latencia ate a tarefa: 2146 us
+evento #15 | latencia ate a tarefa: 4970 us
+evento #16 | latencia ate a tarefa: 4749 us
+evento #17 | latencia ate a tarefa: 461 us
+evento #18 | latencia ate a tarefa: 9001 us
+evento #19 | latencia ate a tarefa: 8974 us
+evento #20 | latencia ate a tarefa: 9687 us
+evento #21 | latencia ate a tarefa: 6927 us
+evento #22 | latencia ate a tarefa: 7549 us
+evento #23 | latencia ate a tarefa: 8480 us
+evento #24 | latencia ate a tarefa: 8538 us
+evento #25 | latencia ate a tarefa: 4637 us
+evento #26 | latencia ate a tarefa: 5750 us
+evento #27 | latencia ate a tarefa: 6212 us
+evento #28 | latencia ate a tarefa: 9431 us
+evento #29 | latencia ate a tarefa: 29 us
+evento #30 | latencia ate a tarefa: 2668 us
+evento #31 | latencia ate a tarefa: 6546 us
+evento #32 | latencia ate a tarefa: 8487 us
+evento #33 | latencia ate a tarefa: 7677 us
+evento #34 | latencia ate a tarefa: 2681 us
+evento #35 | latencia ate a tarefa: 1243 us
+evento #36 | latencia ate a tarefa: 9766 us
+evento #37 | latencia ate a tarefa: 4931 us
+evento #38 | latencia ate a tarefa: 1798 us
+evento #39 | latencia ate a tarefa: 1935 us
+evento #40 | latencia ate a tarefa: 2146 us
+evento #41 | latencia ate a tarefa: 5047 us
+evento #42 | latencia ate a tarefa: 4984 us
+evento #43 | latencia ate a tarefa: 9601 us
