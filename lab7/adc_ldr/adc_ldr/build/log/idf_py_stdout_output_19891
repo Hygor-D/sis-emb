@@ -1,0 +1,1604 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15532
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (29) boot: ESP-IDF v5.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 21 2026 14:45:11[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v3.1[0m
+[0;32mI (37) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (60) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (67) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (75) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (82) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (90) boot: End of partition table[0m
+[0;32mI (94) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09c54h ( 40020) map[0m
+[0;32mI (116) esp_image: segment 1: paddr=00019c7c vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (116) esp_image: segment 2: paddr=00019c88 vaddr=3ffb0000 size=0220ch (  8716) load[0m
+[0;32mI (125) esp_image: segment 3: paddr=0001be9c vaddr=40080000 size=0417ch ( 16764) load[0m
+[0;32mI (137) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=14b2ch ( 84780) map[0m
+[0;32mI (168) esp_image: segment 5: paddr=00034b54 vaddr=4008417c size=0864ch ( 34380) load[0m
+[0;32mI (188) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (188) boot: Disabling RNG early entropy source...[0m
+[0;32mI (199) cpu_start: Multicore app[0m
+[0;32mI (208) cpu_start: Pro cpu start user code[0m
+[0;32mI (208) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (208) cpu_start: Application information:[0m
+[0;32mI (211) cpu_start: Project name:     adc_ldr[0m
+[0;32mI (216) cpu_start: App version:      c04a3bf[0m
+[0;32mI (221) cpu_start: Compile time:     Oct 21 2026 14:45:05[0m
+[0;32mI (227) cpu_start: ELF file SHA256:  8bfbba53d...[0m
+[0;32mI (233) cpu_start: ESP-IDF:          v5.2[0m
+[0;32mI (237) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (242) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (247) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (252) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (259) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFB2AF8 len 0002D508 (181 KiB): DRAM[0m
+[0;32mI (271) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (277) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (284) heap_init: At 4008C7C8 len 00013838 (78 KiB): IRAM[0m
+[0;32mI (292) spi_flash: detected chip: generic[0m
+[0;32mI (295) spi_flash: flash io: dio[0m
+[0;33mW (299) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (312) main_task: Started on CPU0[0m
+[0;32mI (322) main_task: Calling app_main()[0m
+raw=2805  filt=2800  V=2.120  media_1s=2309.6  desvio=785.9
+raw=2807  filt=2803  V=2.122  media_1s=2801.6  desvio=1.4
+raw=2800  filt=2800  V=2.120  media_1s=2800.2  desvio=1.4
+raw=2789  filt=2797  V=2.117  media_1s=2798.1  desvio=0.6
+raw=2800  filt=2796  V=2.117  media_1s=2796.1  desvio=0.7
+raw=2779  filt=2786  V=2.109  media_1s=2793.2  desvio=3.2
+raw=2804  filt=2800  V=2.120  media_1s=2745.1  desvio=48.7
+raw=2848  filt=2829  V=2.142  media_1s=2805.0  desvio=8.5
+raw=2830  filt=2841  V=2.151  media_1s=2843.2  desvio=2.7
+raw=2830  filt=2832  V=2.144  media_1s=2833.2  desvio=2.3
+raw=2827  filt=2829  V=2.142  media_1s=2829.1  desvio=1.1
+raw=2831  filt=2821  V=2.136  media_1s=2821.3  desvio=5.1
+raw=2823  filt=2822  V=2.136  media_1s=2823.3  desvio=1.7
+raw=2816  filt=2820  V=2.135  media_1s=2821.6  desvio=1.3
+raw=2819  filt=2823  V=2.137  media_1s=2821.5  desvio=1.6
+raw=2827  filt=2826  V=2.139  media_1s=2822.2  desvio=1.6
+raw=2825  filt=2826  V=2.139  media_1s=2825.8  desvio=0.9
+raw=2831  filt=2836  V=2.147  media_1s=2832.8  desvio=3.1
+raw=2845  filt=2845  V=2.154  media_1s=2842.3  desvio=2.7
+raw=2864  filt=2853  V=2.160  media_1s=2849.7  desvio=1.9
+raw=2860  filt=2859  V=2.164  media_1s=2857.9  desvio=1.8
+raw=2835  filt=2852  V=2.159  media_1s=2856.8  desvio=1.4
+raw=2635  filt=2654  V=2.009  media_1s=2691.3  desvio=54.7
+raw=2618  filt=2604  V=1.971  media_1s=2619.2  desvio=15.4
+raw=2448  filt=2589  V=1.960  media_1s=2609.5  desvio=5.1
+raw=2842  filt=2848  V=2.156  media_1s=2765.4  desvio=104.9
+raw=2846  filt=2845  V=2.154  media_1s=2844.3  desvio=1.7
+raw=2832  filt=2842  V=2.151  media_1s=2841.7  desvio=1.7
+raw=2839  filt=2836  V=2.147  media_1s=2837.6  desvio=1.6
+raw=2823  filt=2827  V=2.140  media_1s=2830.8  desvio=2.0
+raw=2831  filt=2826  V=2.139  media_1s=2827.7  desvio=0.7
+raw=2817  filt=2824  V=2.138  media_1s=2826.2  desvio=0.8
+raw=2817  filt=2824  V=2.138  media_1s=2822.8  desvio=1.2
+raw=2814  filt=2817  V=2.133  media_1s=2819.4  desvio=4.3
+raw=2819  filt=2827  V=2.140  media_1s=2823.5  desvio=2.1
+raw=2838  filt=2832  V=2.144  media_1s=2828.8  desvio=2.1
+raw=2850  filt=2846  V=2.154  media_1s=2838.6  desvio=4.4
+raw=2863  filt=2855  V=2.161  media_1s=2849.4  desvio=2.6
+raw=2846  filt=2848  V=2.156  media_1s=2854.0  desvio=2.9
+raw=2846  filt=2847  V=2.155  media_1s=2847.1  desvio=0.7
+raw=2845  filt=2847  V=2.155  media_1s=2846.0  desvio=1.3
+raw=2853  filt=2849  V=2.157  media_1s=2849.6  desvio=1.2
+raw=2848  filt=2844  V=2.153  media_1s=2846.2  desvio=1.6
+raw=2836  filt=2839  V=2.149  media_1s=2842.6  desvio=1.9
+raw=2829  filt=2836  V=2.147  media_1s=2837.2  desvio=1.2
+raw=2832  filt=2831  V=2.143  media_1s=2832.2  desvio=1.7
+raw=2832  filt=2831  V=2.143  media_1s=2831.2  desvio=0.5
+raw=2832  filt=2830  V=2.142  media_1s=2830.7  desvio=0.5
+raw=2831  filt=2827  V=2.140  media_1s=2829.7  desvio=1.2
+raw=2832  filt=2827  V=2.140  media_1s=2826.6  desvio=0.6
+raw=2830  filt=2825  V=2.139  media_1s=2825.3  desvio=0.8
+raw=2830  filt=2826  V=2.139  media_1s=2823.6  desvio=1.2
+raw=2827  filt=2826  V=2.139  media_1s=2824.4  desvio=0.9
+raw=2831  filt=2821  V=2.136  media_1s=2823.8  desvio=1.1
+raw=2805  filt=2816  V=2.132  media_1s=2821.3  desvio=2.0
+raw=2822  filt=2818  V=2.133  media_1s=2818.8  desvio=1.3
+raw=2794  filt=2793  V=2.114  media_1s=2803.8  desvio=9.3
+raw=2786  filt=2790  V=2.112  media_1s=2792.9  desvio=1.3
+raw=2777  filt=2776  V=2.101  media_1s=2780.4  desvio=3.5
+raw=2743  filt=2753  V=2.084  media_1s=2769.6  desvio=5.9
+raw=2741  filt=2737  V=2.072  media_1s=2737.8  desvio=4.1
+raw=2747  filt=2744  V=2.077  media_1s=2737.6  desvio=2.7
+raw=2747  filt=2742  V=2.076  media_1s=2743.2  desvio=1.4
+raw=2727  filt=2736  V=2.071  media_1s=2739.4  desvio=1.5
+raw=2734  filt=2741  V=2.075  media_1s=2737.8  desvio=1.7
+raw=2737  filt=2740  V=2.074  media_1s=2739.8  desvio=1.1
+raw=2762  filt=2755  V=2.086  media_1s=2743.9  desvio=5.4
+raw=2783  filt=2761  V=2.090  media_1s=2758.8  desvio=1.8
+raw=2795  filt=2787  V=2.110  media_1s=2780.6  desvio=6.8
+raw=2791  filt=2791  V=2.113  media_1s=2790.4  desvio=1.3
+raw=2807  filt=2805  V=2.123  media_1s=2798.0  desvio=4.0
+raw=2801  filt=2807  V=2.125  media_1s=2805.5  desvio=1.9
+raw=2809  filt=2807  V=2.125  media_1s=2807.2  desvio=1.1
+raw=2806  filt=2804  V=2.123  media_1s=2805.4  desvio=0.7
+raw=2805  filt=2800  V=2.120  media_1s=2802.6  desvio=1.6
+raw=2804  filt=2797  V=2.117  media_1s=2799.1  desvio=2.0
+raw=2791  filt=2796  V=2.117  media_1s=2796.6  desvio=1.4
+raw=2799  filt=2796  V=2.117  media_1s=2794.6  desvio=1.2
+raw=2789  filt=2786  V=2.109  media_1s=2790.2  desvio=3.5
+raw=2781  filt=2782  V=2.106  media_1s=2785.6  desvio=1.9
+raw=2789  filt=2784  V=2.108  media_1s=2783.6  desvio=0.9
+raw=2790  filt=2786  V=2.109  media_1s=2785.0  desvio=1.3
+raw=2798  filt=2790  V=2.112  media_1s=2786.4  desvio=1.9
+raw=2790  filt=2789  V=2.111  media_1s=2790.1  desvio=1.3
+raw=2800  filt=2793  V=2.114  media_1s=2791.8  desvio=1.3
+raw=2775  filt=2771  V=2.098  media_1s=2785.8  desvio=8.5
+raw=2800  filt=2806  V=2.124  media_1s=2789.4  desvio=11.1
+raw=2798  filt=2805  V=2.123  media_1s=2806.2  desvio=0.9
+raw=2809  filt=2808  V=2.126  media_1s=2807.7  desvio=0.8
+raw=2793  filt=2795  V=2.116  media_1s=2806.5  desvio=4.4
+raw=2800  filt=2800  V=2.120  media_1s=2798.2  desvio=3.0
+raw=2832  filt=2832  V=2.144  media_1s=2809.6  desvio=10.9
+raw=2827  filt=2834  V=2.145  media_1s=2835.5  desvio=1.2
+raw=2384  filt=2643  V=2.001  media_1s=2804.6  desvio=48.2
+raw=2809  filt=2789  V=2.111  media_1s=2558.7  desvio=83.5
+raw=2811  filt=2814  V=2.130  media_1s=2811.9  desvio=3.0
+raw=2791  filt=2660  V=2.014  media_1s=2590.6  desvio=130.6
+raw=2736  filt=2759  V=2.089  media_1s=2778.8  desvio=22.9
+raw=2783  filt=2769  V=2.096  media_1s=2751.3  desvio=10.1
+raw=2811  filt=2807  V=2.125  media_1s=2788.2  desvio=15.4
+raw=2814  filt=2807  V=2.125  media_1s=2806.6  desvio=1.6
+raw=2829  filt=2817  V=2.133  media_1s=2811.9  desvio=3.0
+raw=2831  filt=2823  V=2.137  media_1s=2820.8  desvio=1.5
+raw=2829  filt=2821  V=2.136  media_1s=2823.3  desvio=1.5
+raw=2811  filt=2808  V=2.126  media_1s=2813.8  desvio=5.2
+raw=2809  filt=2794  V=2.115  media_1s=2796.7  desvio=6.5
+raw=2783  filt=2787  V=2.110  media_1s=2794.3  desvio=6.3
+raw=2845  filt=2838  V=2.148  media_1s=2814.6  desvio=18.2
+raw=2859  filt=2851  V=2.158  media_1s=2845.1  desvio=3.1
+raw=2847  filt=2846  V=2.154  media_1s=2852.2  desvio=3.9
+raw=2874  filt=2868  V=2.171  media_1s=2858.3  desvio=7.3
+raw=2880  filt=2875  V=2.176  media_1s=2872.6  desvio=2.4
+raw=2875  filt=2875  V=2.176  media_1s=2875.2  desvio=0.9
+raw=2884  filt=2879  V=2.179  media_1s=2877.1  desvio=1.6
+raw=2883  filt=2876  V=2.177  media_1s=2876.9  desvio=1.0
+raw=2887  filt=2877  V=2.178  media_1s=2877.2  desvio=1.4
+raw=2879  filt=2879  V=2.179  media_1s=2877.4  desvio=1.2
+raw=2879  filt=2878  V=2.179  media_1s=2878.2  desvio=0.9
+raw=2867  filt=2872  V=2.174  media_1s=2873.3  desvio=1.9
+raw=2874  filt=2875  V=2.176  media_1s=2873.5  desvio=1.0
+raw=2879  filt=2878  V=2.179  media_1s=2877.8  desvio=0.8
+raw=2879  filt=2877  V=2.178  media_1s=2877.1  desvio=1.1
+raw=2874  filt=2878  V=2.179  media_1s=2878.0  desvio=1.4
+raw=2885  filt=2878  V=2.179  media_1s=2877.8  desvio=0.6
+raw=2888  filt=2882  V=2.182  media_1s=2880.1  desvio=1.3
+raw=2874  filt=2878  V=2.179  media_1s=2880.7  desvio=1.3
+raw=2885  filt=2881  V=2.181  media_1s=2880.2  desvio=1.4
+raw=2887  filt=2880  V=2.180  media_1s=2879.4  desvio=1.5
+raw=2882  filt=2882  V=2.182  media_1s=2882.3  desvio=0.9
+raw=2878  filt=2883  V=2.182  media_1s=2881.3  desvio=1.1
+raw=2891  filt=2886  V=2.185  media_1s=2883.2  desvio=1.0
+raw=2881  filt=2883  V=2.182  media_1s=2883.8  desvio=0.8
+raw=2869  filt=2879  V=2.179  media_1s=2881.1  desvio=1.9
+raw=2879  filt=2875  V=2.176  media_1s=2877.2  desvio=1.5
+raw=2864  filt=2871  V=2.173  media_1s=2874.4  desvio=1.4
+raw=2875  filt=2865  V=2.169  media_1s=2867.2  desvio=2.1
+raw=2843  filt=2849  V=2.157  media_1s=2860.3  desvio=4.7
+raw=2811  filt=2816  V=2.132  media_1s=2829.2  desvio=11.6
+raw=2715  filt=2793  V=2.114  media_1s=2807.9  desvio=3.9
+raw=2752  filt=2626  V=1.988  media_1s=2666.2  desvio=82.9
+raw=2781  filt=2780  V=2.105  media_1s=2755.3  desvio=34.9
+raw=2796  filt=2779  V=2.104  media_1s=2772.5  desvio=6.9
+raw=2798  filt=2806  V=2.124  media_1s=2800.8  desvio=8.0
+raw=2813  filt=2811  V=2.128  media_1s=2806.1  desvio=2.5
+raw=2819  filt=2817  V=2.133  media_1s=2814.8  desvio=2.6
+raw=2816  filt=2816  V=2.132  media_1s=2816.5  desvio=0.8
+raw=2832  filt=2828  V=2.141  media_1s=2821.2  desvio=4.0
+raw=2829  filt=2825  V=2.139  media_1s=2826.8  desvio=1.1
+raw=2798  filt=2815  V=2.131  media_1s=2820.9  desvio=2.2
+raw=2790  filt=2784  V=2.108  media_1s=2792.4  desvio=9.7
+raw=2784  filt=2777  V=2.102  media_1s=2780.3  desvio=3.8
+raw=2787  filt=2774  V=2.100  media_1s=2772.9  desvio=3.6
+raw=2807  filt=2807  V=2.125  media_1s=2798.5  desvio=10.3
+raw=2791  filt=2785  V=2.108  media_1s=2796.6  desvio=9.2
+raw=2786  filt=2786  V=2.109  media_1s=2785.1  desvio=0.9
+raw=2758  filt=2770  V=2.097  media_1s=2778.2  desvio=2.8
+raw=2751  filt=2746  V=2.079  media_1s=2751.7  desvio=7.4
+raw=2758  filt=2753  V=2.084  media_1s=2751.2  desvio=2.1
+raw=2767  filt=2768  V=2.095  media_1s=2755.7  desvio=6.9
+raw=2767  filt=2764  V=2.092  media_1s=2754.4  desvio=10.5
+raw=1865  filt=1980  V=1.499  media_1s=2449.2  desvio=300.3
+raw=1433  filt=1666  V=1.261  media_1s=1646.5  desvio=143.1
+raw=2391  filt=2622  V=1.985  media_1s=2149.2  desvio=453.1
+raw=1955  filt=1944  V=1.472  media_1s=2210.8  desvio=260.5
+raw=2033  filt=2036  V=1.541  media_1s=2002.0  desvio=28.0
+raw=2010  filt=2034  V=1.540  media_1s=2037.0  desvio=2.0
+raw=2271  filt=2231  V=1.689  media_1s=2091.1  desvio=68.5
+raw=2291  filt=2289  V=1.733  media_1s=2271.0  desvio=17.6
+raw=2317  filt=2296  V=1.738  media_1s=2287.8  desvio=5.8
+raw=2319  filt=2300  V=1.741  media_1s=2295.8  desvio=4.1
+raw=1309  filt=2006  V=1.519  media_1s=2277.7  desvio=72.6
+raw=2242  filt=1612  V=1.220  media_1s=1437.5  desvio=157.1
+raw=2805  filt=2801  V=2.120  media_1s=2625.6  desvio=312.5
+raw=2780  filt=2771  V=2.098  media_1s=2785.3  desvio=10.8
+raw=2839  filt=2772  V=2.098  media_1s=2767.1  desvio=7.2
+raw=1802  filt=1801  V=1.363  media_1s=2146.8  desvio=444.7
+raw=1851  filt=1840  V=1.393  media_1s=1827.2  desvio=9.8
+raw=1823  filt=1836  V=1.390  media_1s=1834.9  desvio=1.8
+raw=1802  filt=1827  V=1.383  media_1s=1831.7  desvio=2.1
+raw= 967  filt=1512  V=1.145  media_1s=1784.8  desvio=81.3
+raw=2783  filt=2628  V=1.989  media_1s=1601.4  desvio=494.8
+raw=2779  filt=2783  V=2.107  media_1s=2778.8  desvio=17.8
+raw=2777  filt=2779  V=2.104  media_1s=2784.6  desvio=2.5
+raw=2798  filt=2790  V=2.112  media_1s=2784.2  desvio=2.3
+raw=2777  filt=2785  V=2.108  media_1s=2799.4  desvio=7.4
+raw=2750  filt=2755  V=2.086  media_1s=2767.1  desvio=7.7
+raw=1047  filt=1756  V=1.329  media_1s=2381.4  desvio=305.7
+raw=2308  filt=2270  V=1.718  media_1s=1607.5  desvio=450.1
+raw=2303  filt=2293  V=1.736  media_1s=2284.9  desvio=9.3
+raw=2288  filt=2290  V=1.734  media_1s=2291.8  desvio=1.9
+raw=2271  filt=2287  V=1.731  media_1s=2288.5  desvio=3.1
+raw=2286  filt=2274  V=1.721  media_1s=2283.8  desvio=5.4
+raw=2290  filt=2208  V=1.672  media_1s=2252.4  desvio=28.8
+raw=2283  filt=2296  V=1.738  media_1s=2267.5  desvio=35.1
+raw=2979  filt=2494  V=1.888  media_1s=2317.9  desvio=47.2
+raw=2795  filt=2796  V=2.117  media_1s=2791.7  desvio=62.4
+raw=2831  filt=2828  V=2.141  media_1s=2817.2  desvio=11.0
+raw=2748  filt=2772  V=2.098  media_1s=2814.3  desvio=18.9
+raw=2786  filt=2792  V=2.114  media_1s=2783.2  desvio=9.6
+raw=2799  filt=2791  V=2.113  media_1s=2792.3  desvio=1.2
+raw=2791  filt=2793  V=2.114  media_1s=2792.3  desvio=1.7
+raw=2800  filt=2796  V=2.117  media_1s=2794.5  desvio=1.1
+raw=2794  filt=2800  V=2.120  media_1s=2798.7  desvio=1.5
+raw=2812  filt=2805  V=2.123  media_1s=2802.1  desvio=2.1
+raw=2816  filt=2809  V=2.126  media_1s=2805.1  desvio=1.5
+raw=2795  filt=2802  V=2.121  media_1s=2809.8  desvio=2.7
+raw=2821  filt=2819  V=2.134  media_1s=2792.7  desvio=19.0
+raw=2827  filt=2820  V=2.135  media_1s=2819.3  desvio=1.3
+raw=2834  filt=2827  V=2.140  media_1s=2823.6  desvio=1.8
+raw=2832  filt=2824  V=2.138  media_1s=2824.7  desvio=1.9
+raw=2818  filt=2823  V=2.137  media_1s=2823.2  desvio=2.1
+raw=2811  filt=2818  V=2.133  media_1s=2819.2  desvio=1.8
+raw=2814  filt=2814  V=2.130  media_1s=2815.2  desvio=2.3
+raw=2800  filt=2804  V=2.123  media_1s=2808.4  desvio=2.9
+raw=2798  filt=2799  V=2.119  media_1s=2803.2  desvio=2.5
+raw=2788  filt=2797  V=2.117  media_1s=2797.8  desvio=1.3
+raw=2800  filt=2791  V=2.113  media_1s=2792.7  desvio=2.1
+raw=2784  filt=2786  V=2.109  media_1s=2789.8  desvio=1.4
+raw=2795  filt=2789  V=2.111  media_1s=2786.4  desvio=1.5
+raw=2787  filt=2786  V=2.109  media_1s=2785.8  desvio=1.0
+raw=2791  filt=2788  V=2.111  media_1s=2784.7  desvio=1.2
+raw=2798  filt=2789  V=2.111  media_1s=2789.1  desvio=1.0
+raw=2793  filt=2794  V=2.115  media_1s=2791.9  desvio=1.6
+raw=2826  filt=2822  V=2.136  media_1s=2804.6  desvio=8.5
+raw=2841  filt=2834  V=2.145  media_1s=2831.0  desvio=1.8
+raw=3472  filt=3440  V=2.604  media_1s=2942.0  desvio=193.9
+raw=3753  filt=3710  V=2.809  media_1s=3480.2  desvio=111.0
+raw=3525  filt=3619  V=2.740  media_1s=3703.2  desvio=37.2
+raw=4062  filt=3980  V=3.013  media_1s=3739.7  desvio=150.0
+raw=3911  filt=3974  V=3.008  media_1s=4007.6  desvio=21.3
+raw=4095  filt=4093  V=3.098  media_1s=3953.4  desvio=106.2
+raw=3973  filt=3969  V=3.005  media_1s=4058.0  desvio=46.2
+raw=3957  filt=4043  V=3.061  media_1s=4034.1  desvio=38.0
+raw=4095  filt=4045  V=3.062  media_1s=3808.7  desvio=142.6
+raw=3990  filt=3956  V=2.995  media_1s=4010.9  desvio=49.8
+raw=3911  filt=3911  V=2.961  media_1s=3902.2  desvio=33.2
+raw=3854  filt=3850  V=2.915  media_1s=3897.2  desvio=23.1
+raw=3845  filt=3830  V=2.899  media_1s=3843.2  desvio=5.4
+raw=3750  filt=3735  V=2.827  media_1s=3787.2  desvio=37.7
+raw=4095  filt=4034  V=3.054  media_1s=3836.9  desvio=104.2
+raw=4095  filt=4057  V=3.071  media_1s=3923.6  desvio=129.4
+raw=3877  filt=3617  V=2.738  media_1s=3422.3  desvio=441.2
+raw=3717  filt=3490  V=2.642  media_1s=3567.7  desvio=223.5
+raw=3834  filt=3830  V=2.899  media_1s=3793.2  desvio=68.4
+raw=3919  filt=3932  V=2.977  media_1s=3907.3  desvio=28.9
+raw=3940  filt=3936  V=2.980  media_1s=3938.9  desvio=4.0
+raw=3861  filt=3836  V=2.904  media_1s=3906.8  desvio=46.9
+raw=3937  filt=3934  V=2.978  media_1s=3894.7  desvio=26.2
+raw=3998  filt=3967  V=3.003  media_1s=3960.2  desvio=9.2
+raw=4018  filt=3977  V=3.011  media_1s=3973.6  desvio=2.6
+raw=3986  filt=3976  V=3.010  media_1s=3973.3  desvio=4.6
+raw=3395  filt=3669  V=2.778  media_1s=3922.7  desvio=86.9
+raw=4095  filt=3664  V=2.774  media_1s=3451.4  desvio=80.5
+raw=3379  filt=2790  V=2.112  media_1s=3359.2  desvio=533.7
+raw=3330  filt=3629  V=2.747  media_1s=3715.2  desvio=359.2
+raw=3376  filt=3381  V=2.559  media_1s=3390.4  desvio=36.7
+raw=3438  filt=3354  V=2.539  media_1s=3378.9  desvio=10.3
+raw=3958  filt=4074  V=3.084  media_1s=3935.6  desvio=234.6
+raw=4068  filt=4079  V=3.088  media_1s=4053.4  desvio=18.4
+raw=4095  filt=4095  V=3.100  media_1s=4090.3  desvio=5.5
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=2872  filt=2834  V=2.145  media_1s=3174.1  desvio=449.1
+raw=2783  filt=2795  V=2.116  media_1s=2817.8  desvio=10.2
+raw=2752  filt=2769  V=2.096  media_1s=2778.5  desvio=5.3
+raw=3722  filt=3094  V=2.342  media_1s=2630.7  desvio=205.6
+raw=3815  filt=3784  V=2.865  media_1s=3703.7  desvio=111.0
+raw=4052  filt=4033  V=3.053  media_1s=3914.6  desvio=79.7
+raw=4094  filt=4090  V=3.096  media_1s=4038.8  desvio=27.5
+raw=4095  filt=4095  V=3.100  media_1s=4094.3  desvio=1.2
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=3515  filt=3901  V=2.953  media_1s=4074.1  desvio=49.5
+raw=2748  filt=2778  V=2.103  media_1s=3198.2  desvio=344.4
+raw=4095  filt=3650  V=2.763  media_1s=2928.0  desvio=297.7
+raw=4095  filt=4095  V=3.100  media_1s=4076.7  desvio=52.1
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=2847  filt=3071  V=2.325  media_1s=3604.3  desvio=324.5
+raw=2242  filt=2627  V=1.989  media_1s=2789.8  desvio=76.7
+raw=3435  filt=3253  V=2.463  media_1s=2561.6  desvio=340.3
+raw=3340  filt=3208  V=2.429  media_1s=3527.3  desvio=184.3
+raw=4095  filt=4095  V=3.100  media_1s=3881.0  desvio=285.2
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=3933  filt=4062  V=3.075  media_1s=4092.7  desvio=7.6
+raw=4053  filt=4032  V=3.052  media_1s=3891.5  desvio=102.0
+raw=4095  filt=4095  V=3.100  media_1s=4080.5  desvio=19.4
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4089.6  desvio=5.2
+raw=3477  filt=3685  V=2.790  media_1s=4032.1  desvio=121.0
+raw=4095  filt=4095  V=3.100  media_1s=3941.8  desvio=193.3
+raw=3813  filt=3914  V=2.963  media_1s=4028.1  desvio=61.0
+raw=3984  filt=3958  V=2.996  media_1s=3852.6  desvio=56.9
+raw=4071  filt=4077  V=3.086  media_1s=4039.7  desvio=41.0
+raw=3281  filt=3786  V=2.866  media_1s=4008.1  desvio=68.2
+raw=3228  filt=3207  V=2.428  media_1s=3275.8  desvio=158.2
+raw=2973  filt=2984  V=2.259  media_1s=3138.5  desvio=104.5
+raw=2906  filt=2955  V=2.237  media_1s=3000.8  desvio=21.4
+raw=3010  filt=2911  V=2.204  media_1s=2832.4  desvio=48.4
+raw=3727  filt=3575  V=2.706  media_1s=3196.7  desvio=173.0
+raw=3979  filt=3902  V=2.954  media_1s=3816.3  desvio=77.3
+raw=4067  filt=4047  V=3.064  media_1s=3995.2  desvio=38.8
+raw=4006  filt=4018  V=3.042  media_1s=4064.3  desvio=22.7
+raw=3955  filt=3912  V=2.961  media_1s=3905.3  desvio=55.2
+raw=3599  filt=3585  V=2.714  media_1s=3730.4  desvio=145.5
+raw=3786  filt=3785  V=2.865  media_1s=3677.4  desvio=65.9
+raw=3877  filt=3878  V=2.936  media_1s=3827.8  desvio=31.1
+raw=3859  filt=3926  V=2.972  media_1s=3922.6  desvio=17.2
+raw=4095  filt=4094  V=3.099  media_1s=4018.6  desvio=68.5
+raw=4011  filt=4023  V=3.045  media_1s=4081.9  desvio=22.4
+raw=3893  filt=3881  V=2.938  media_1s=3941.8  desvio=36.3
+raw=3854  filt=3916  V=2.964  media_1s=3906.7  desvio=20.5
+raw=2258  filt=2711  V=2.052  media_1s=3664.7  desvio=349.4
+raw=2011  filt=1994  V=1.509  media_1s=2129.6  desvio=154.4
+raw=2145  filt=2092  V=1.584  media_1s=2048.0  desvio=19.6
+raw=2154  filt=2154  V=1.631  media_1s=2158.0  desvio=30.8
+raw=2160  filt=2129  V=1.612  media_1s=2133.3  desvio=6.6
+raw=4095  filt=3625  V=2.744  media_1s=2305.2  desvio=529.7
+raw=3696  filt=3952  V=2.992  media_1s=4041.6  desvio=76.4
+raw=3783  filt=3765  V=2.850  media_1s=3623.2  desvio=138.1
+raw=2000  filt=2930  V=2.218  media_1s=3697.1  desvio=253.7
+raw=4095  filt=4095  V=3.100  media_1s=3324.1  desvio=688.9
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=2969  filt=3573  V=2.705  media_1s=4018.9  desvio=144.1
+raw=2796  filt=2784  V=2.108  media_1s=2886.4  desvio=188.2
+raw=2808  filt=2829  V=2.142  media_1s=2799.8  desvio=14.1
+raw=2790  filt=2786  V=2.109  media_1s=2794.6  desvio=13.9
+raw=2945  filt=2832  V=2.144  media_1s=2785.1  desvio=14.0
+raw=3601  filt=3474  V=2.630  media_1s=3295.4  desvio=187.5
+raw=1638  filt=1597  V=1.209  media_1s=2505.2  desvio=803.4
+raw=1584  filt=1605  V=1.215  media_1s=1605.1  desvio=6.5
+raw=1597  filt=1597  V=1.209  media_1s=1533.8  desvio=67.6
+raw=2782  filt=2791  V=2.113  media_1s=2404.2  desvio=460.1
+raw=2764  filt=2762  V=2.091  media_1s=2779.8  desvio=6.2
+raw=2773  filt=2771  V=2.098  media_1s=2767.3  desvio=5.5
+raw=2186  filt=2332  V=1.765  media_1s=2611.9  desvio=182.2
+raw=2027  filt=2177  V=1.648  media_1s=2411.1  desvio=123.4
+raw=2075  filt=2055  V=1.556  media_1s=2051.8  desvio=30.6
+raw=2075  filt=2076  V=1.572  media_1s=2070.7  desvio=6.1
+raw=1941  filt=2048  V=1.550  media_1s=2076.1  desvio=9.8
+raw=2108  filt=2097  V=1.587  media_1s=2071.9  desvio=28.8
+raw=2107  filt=2107  V=1.595  media_1s=2097.6  desvio=5.0
+raw=2097  filt=2070  V=1.567  media_1s=2090.4  desvio=12.2
+raw=2801  filt=2794  V=2.115  media_1s=2267.8  desvio=272.7
+raw=2832  filt=2827  V=2.140  media_1s=2807.6  desvio=9.8
+raw=3152  filt=2875  V=2.176  media_1s=2829.9  desvio=11.0
+raw=3619  filt=3659  V=2.770  media_1s=3342.0  desvio=238.3
+raw=2770  filt=2770  V=2.097  media_1s=3429.9  desvio=311.7
+raw=2753  filt=2757  V=2.087  media_1s=2758.8  desvio=5.9
+raw=2714  filt=2746  V=2.079  media_1s=2759.0  desvio=3.9
+raw=2753  filt=2747  V=2.080  media_1s=2744.8  desvio=4.7
+raw=2751  filt=2745  V=2.078  media_1s=2744.4  desvio=0.7
+raw=2738  filt=2736  V=2.071  media_1s=2739.8  desvio=2.6
+raw=2720  filt=2726  V=2.064  media_1s=2731.8  desvio=3.2
+raw=2719  filt=2723  V=2.061  media_1s=2725.2  desvio=1.2
+raw=2714  filt=2720  V=2.059  media_1s=2723.9  desvio=1.9
+raw=2715  filt=2720  V=2.059  media_1s=2720.6  desvio=0.9
+raw=2725  filt=2722  V=2.061  media_1s=2721.4  desvio=1.4
+raw=2736  filt=2723  V=2.061  media_1s=2720.6  desvio=0.9
+raw=2710  filt=2709  V=2.051  media_1s=2725.8  desvio=7.7
+raw=2733  filt=2728  V=2.065  media_1s=2718.8  desvio=7.4
+raw=2745  filt=2747  V=2.080  media_1s=2741.3  desvio=7.2
+raw=2736  filt=2735  V=2.070  media_1s=2734.7  desvio=9.0
+raw=2741  filt=2737  V=2.072  media_1s=2739.4  desvio=1.5
+raw=2749  filt=2747  V=2.080  media_1s=2741.4  desvio=3.0
+raw=2759  filt=2752  V=2.083  media_1s=2746.3  desvio=2.2
+raw=2743  filt=2749  V=2.081  media_1s=2748.3  desvio=1.6
+raw=2750  filt=2753  V=2.084  media_1s=2750.2  desvio=1.7
+raw=2766  filt=2754  V=2.085  media_1s=2753.3  desvio=0.9
+raw=2752  filt=2757  V=2.087  media_1s=2756.2  desvio=1.3
+raw=2765  filt=2760  V=2.089  media_1s=2759.3  desvio=1.0
+raw=2759  filt=2756  V=2.086  media_1s=2759.4  desvio=2.2
+raw=2767  filt=2760  V=2.089  media_1s=2758.2  desvio=1.1
+raw=2763  filt=2757  V=2.087  media_1s=2760.2  desvio=1.7
+raw=2750  filt=2753  V=2.084  media_1s=2753.8  desvio=1.8
+raw=2746  filt=2753  V=2.084  media_1s=2751.8  desvio=1.1
+raw=2759  filt=2753  V=2.084  media_1s=2753.8  desvio=1.0
+raw=2743  filt=2752  V=2.083  media_1s=2751.9  desvio=0.7
+raw=2737  filt=2748  V=2.080  media_1s=2750.3  desvio=1.1
+raw=2743  filt=2748  V=2.080  media_1s=2748.8  desvio=1.3
+raw=2756  filt=2749  V=2.081  media_1s=2750.5  desvio=1.1
+raw=2751  filt=2746  V=2.079  media_1s=2746.8  desvio=0.9
+raw=2734  filt=2738  V=2.073  media_1s=2743.9  desvio=3.0
+raw=2737  filt=2738  V=2.073  media_1s=2739.1  desvio=1.3
+raw=2735  filt=2734  V=2.070  media_1s=2734.4  desvio=1.3
+raw=2723  filt=2728  V=2.065  media_1s=2731.1  desvio=1.6
+raw=2718  filt=2723  V=2.061  media_1s=2725.7  desvio=1.2
+raw=2721  filt=2720  V=2.059  media_1s=2720.8  desvio=1.0
+raw=2739  filt=2730  V=2.067  media_1s=2721.9  desvio=2.6
+raw=2793  filt=2782  V=2.106  media_1s=2757.5  desvio=16.5
+raw=2790  filt=2787  V=2.110  media_1s=2787.2  desvio=1.4
+raw=2818  filt=2809  V=2.126  media_1s=2799.3  desvio=6.6
+raw=2799  filt=2791  V=2.113  media_1s=2800.8  desvio=6.5
+raw=2795  filt=2795  V=2.116  media_1s=2794.5  desvio=2.5
+raw=2771  filt=2779  V=2.104  media_1s=2786.3  desvio=5.2
+raw=3574  filt=3499  V=2.649  media_1s=3300.6  desvio=232.9
+raw=3886  filt=3835  V=2.903  media_1s=3609.2  desvio=114.9
+raw=3783  filt=3818  V=2.890  media_1s=3842.4  desvio=13.3
+raw=3723  filt=3695  V=2.797  media_1s=3741.5  desvio=35.2
+raw=3650  filt=3647  V=2.761  media_1s=3661.9  desvio=13.4
+raw=3606  filt=3621  V=2.741  media_1s=3639.6  desvio=8.3
+raw=3520  filt=3572  V=2.704  media_1s=3602.7  desvio=11.7
+raw=3958  filt=3746  V=2.836  media_1s=3512.2  desvio=89.7
+raw=4095  filt=4095  V=3.100  media_1s=4040.6  desvio=86.8
+raw=3822  filt=3784  V=2.865  media_1s=3934.8  desvio=130.9
+raw=3463  filt=3597  V=2.723  media_1s=3634.9  desvio=101.7
+raw=2787  filt=2839  V=2.149  media_1s=2793.7  desvio=363.4
+raw=3474  filt=3453  V=2.614  media_1s=2998.3  desvio=237.0
+raw=4081  filt=3977  V=3.011  media_1s=3592.6  desvio=227.0
+raw=4095  filt=4095  V=3.100  media_1s=4080.1  desvio=25.8
+raw=4047  filt=4080  V=3.089  media_1s=4093.6  desvio=3.8
+raw=4006  filt=4012  V=3.037  media_1s=4029.7  desvio=17.7
+raw=3947  filt=3955  V=2.994  media_1s=3988.7  desvio=21.2
+raw=3747  filt=3837  V=2.905  media_1s=3904.1  desvio=34.4
+raw=2717  filt=2786  V=2.109  media_1s=3249.8  desvio=330.2
+raw=2586  filt=2610  V=1.976  media_1s=2661.9  desvio=41.2
+raw=2480  filt=2476  V=1.874  media_1s=2502.8  desvio=38.6
+raw=2496  filt=2486  V=1.882  media_1s=2481.4  desvio=3.1
+raw=2481  filt=2486  V=1.882  media_1s=2487.0  desvio=1.1
+raw=1909  filt=2265  V=1.715  media_1s=2468.2  desvio=58.9
+raw=3793  filt=3123  V=2.364  media_1s=2185.9  desvio=349.9
+raw=4052  filt=4055  V=3.070  media_1s=3968.9  desvio=210.6
+raw=3791  filt=3776  V=2.859  media_1s=3906.3  desvio=100.3
+raw=4095  filt=4077  V=3.086  media_1s=3937.5  desvio=94.4
+raw=2352  filt=2929  V=2.217  media_1s=3760.7  desvio=336.4
+raw=2028  filt=2143  V=1.622  media_1s=2325.4  desvio=147.7
+raw=1979  filt=1996  V=1.511  media_1s=2034.8  desvio=29.7
+raw=3856  filt=3987  V=3.018  media_1s=2582.3  desvio=777.4
+raw=3002  filt=3020  V=2.286  media_1s=3393.2  desvio=307.9
+raw=2768  filt=2811  V=2.128  media_1s=2938.4  desvio=59.2
+raw=2768  filt=2767  V=2.095  media_1s=2764.1  desvio=11.4
+raw=2830  filt=2830  V=2.142  media_1s=2810.9  desvio=18.9
+raw=2739  filt=3010  V=2.279  media_1s=2873.5  desvio=71.3
+raw=3053  filt=3065  V=2.320  media_1s=2952.4  desvio=88.9
+raw=3067  filt=3049  V=2.308  media_1s=3050.6  desvio=12.9
+raw=3545  filt=3437  V=2.602  media_1s=3203.8  desvio=129.6
+raw=4007  filt=3982  V=3.014  media_1s=3805.7  desvio=172.9
+raw=4027  filt=4062  V=3.075  media_1s=4041.0  desvio=21.4
+raw=4095  filt=4095  V=3.100  media_1s=4063.9  desvio=31.9
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4059  filt=4090  V=3.096  media_1s=4094.8  desvio=1.1
+raw=3121  filt=3166  V=2.397  media_1s=3547.9  desvio=318.2
+raw=2986  filt=3010  V=2.279  media_1s=3097.0  desvio=38.8
+raw=3325  filt=3275  V=2.479  media_1s=3121.3  desvio=92.0
+raw=3110  filt=2737  V=2.072  media_1s=3201.3  desvio=235.0
+raw=4095  filt=4095  V=3.100  media_1s=3689.6  desvio=461.7
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=2768  filt=2927  V=2.216  media_1s=3573.5  desvio=403.8
+raw=2745  filt=2754  V=2.085  media_1s=2766.5  desvio=33.1
+raw=2763  filt=2755  V=2.086  media_1s=2756.3  desvio=2.1
+raw=2782  filt=2772  V=2.098  media_1s=2762.7  desvio=5.5
+raw=2800  filt=2794  V=2.115  media_1s=2782.8  desvio=5.4
+raw=2777  filt=2781  V=2.105  media_1s=2780.9  desvio=6.5
+raw=1319  filt=1466  V=1.110  media_1s=2438.8  desvio=427.2
+raw=1311  filt=1317  V=0.997  media_1s=1328.2  desvio=38.3
+raw=1299  filt=1313  V=0.994  media_1s=1316.2  desvio=3.0
+raw=1319  filt=1307  V=0.989  media_1s=1311.2  desvio=4.4
+raw=1292  filt=1300  V=0.984  media_1s=1302.4  desvio=3.5
+raw=2764  filt=2403  V=1.819  media_1s=1489.2  desvio=343.6
+raw=2761  filt=2763  V=2.092  media_1s=2756.8  desvio=39.2
+raw=2747  filt=2747  V=2.080  media_1s=2751.2  desvio=7.5
+raw=2161  filt=2174  V=1.646  media_1s=2582.4  desvio=197.8
+raw=2047  filt=2045  V=1.548  media_1s=2108.9  desvio=62.7
+raw=2045  filt=2044  V=1.547  media_1s=2050.2  desvio=7.2
+raw=2725  filt=2392  V=1.811  media_1s=2088.9  desvio=98.8
+raw=2749  filt=2747  V=2.080  media_1s=2713.7  desvio=67.4
+raw=2767  filt=2750  V=2.082  media_1s=2749.7  desvio=2.9
+raw=2771  filt=2769  V=2.096  media_1s=2759.2  desvio=5.9
+raw=2782  filt=2776  V=2.101  media_1s=2773.2  desvio=1.5
+raw=2347  filt=2345  V=1.775  media_1s=2638.6  desvio=164.2
+raw=2361  filt=2354  V=1.782  media_1s=2376.2  desvio=30.7
+raw=2354  filt=2353  V=1.781  media_1s=2353.9  desvio=2.4
+raw=2784  filt=2624  V=1.986  media_1s=2398.6  desvio=79.8
+raw=2777  filt=2776  V=2.101  media_1s=2773.1  desvio=24.9
+raw=2747  filt=2761  V=2.090  media_1s=2772.9  desvio=5.1
+raw=2073  filt=2309  V=1.748  media_1s=2658.8  desvio=145.5
+raw=2054  filt=2061  V=1.560  media_1s=2310.7  desvio=167.2
+raw=2071  filt=2051  V=1.553  media_1s=2060.3  desvio=3.8
+raw=2077  filt=2064  V=1.562  media_1s=2059.8  desvio=3.9
+raw=2036  filt=2052  V=1.553  media_1s=2057.9  desvio=2.8
+raw=2066  filt=2054  V=1.555  media_1s=2052.2  desvio=2.7
+raw=2684  filt=2219  V=1.680  media_1s=2074.1  desvio=37.6
+raw=2757  filt=2748  V=2.080  media_1s=2680.6  desvio=127.9
+raw=2781  filt=2781  V=2.105  media_1s=2769.7  desvio=9.6
+raw=2763  filt=2760  V=2.089  media_1s=2770.4  desvio=8.6
+raw=4095  filt=4095  V=3.100  media_1s=3186.9  desvio=524.6
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=3926  V=2.972  media_1s=3976.6  desvio=140.6
+raw=2638  filt=2760  V=2.089  media_1s=3045.8  desvio=421.8
+raw=2794  filt=2779  V=2.104  media_1s=2765.1  desvio=10.2
+raw=2802  filt=2808  V=2.126  media_1s=2801.3  desvio=7.9
+raw=2816  filt=2805  V=2.123  media_1s=2804.9  desvio=1.9
+raw=2807  filt=2808  V=2.126  media_1s=2811.7  desvio=3.3
+raw=2797  filt=2810  V=2.127  media_1s=2812.8  desvio=4.1
+raw=2797  filt=2796  V=2.117  media_1s=2795.0  desvio=4.8
+raw=2779  filt=2780  V=2.105  media_1s=2789.9  desvio=7.0
+raw=2768  filt=2773  V=2.099  media_1s=2776.1  desvio=2.7
+raw=2768  filt=2767  V=2.095  media_1s=2773.3  desvio=3.0
+raw=2777  filt=2774  V=2.100  media_1s=2775.8  desvio=5.0
+raw=2782  filt=2776  V=2.101  media_1s=2779.6  desvio=3.4
+raw=2783  filt=2781  V=2.105  media_1s=2777.7  desvio=1.7
+raw=2789  filt=2791  V=2.113  media_1s=2790.9  desvio=5.2
+raw=2786  filt=2801  V=2.120  media_1s=2800.3  desvio=6.2
+raw=2806  filt=2799  V=2.119  media_1s=2780.7  desvio=12.0
+raw=2817  filt=2811  V=2.128  media_1s=2805.8  desvio=3.3
+raw=2805  filt=2806  V=2.124  media_1s=2811.8  desvio=3.0
+raw=2798  filt=2802  V=2.121  media_1s=2805.1  desvio=2.0
+raw=2755  filt=2766  V=2.094  media_1s=2753.5  desvio=29.8
+raw=2672  filt=2735  V=2.070  media_1s=2744.2  desvio=9.2
+raw=2770  filt=2768  V=2.095  media_1s=2730.7  desvio=42.2
+raw=2762  filt=2763  V=2.092  media_1s=2767.0  desvio=2.4
+raw=2759  filt=2757  V=2.087  media_1s=2758.8  desvio=2.6
+raw=2760  filt=2759  V=2.089  media_1s=2756.6  desvio=2.2
+raw=2768  filt=2759  V=2.089  media_1s=2758.9  desvio=1.6
+raw=2768  filt=2771  V=2.098  media_1s=2769.2  desvio=3.7
+raw=2778  filt=2782  V=2.106  media_1s=2777.8  desvio=4.9
+raw=2754  filt=2770  V=2.097  media_1s=2777.4  desvio=3.1
+raw=2746  filt=2749  V=2.081  media_1s=2752.4  desvio=5.4
+raw=2752  filt=2747  V=2.080  media_1s=2747.7  desvio=2.6
+raw=2766  filt=2768  V=2.095  media_1s=2764.7  desvio=6.9
+raw=2766  filt=2762  V=2.091  media_1s=2764.3  desvio=2.1
+raw=2759  filt=2753  V=2.084  media_1s=2753.6  desvio=4.6
+raw= 991  filt=1127  V=0.853  media_1s=2365.8  desvio=551.2
+raw=1101  filt=1041  V=0.788  media_1s=1033.8  desvio=15.1
+raw=1073  filt=1024  V=0.775  media_1s=1041.2  desvio=17.4
+raw=1023  filt=1023  V=0.774  media_1s=1020.0  desvio=19.1
+raw= 932  filt=1209  V=0.915  media_1s=1060.9  desvio=64.0
+raw=1088  filt=1115  V=0.844  media_1s=1087.4  desvio=52.5
+raw=1162  filt=1221  V=0.924  media_1s=1153.0  desvio=36.2
+raw=1131  filt=1207  V=0.914  media_1s=1192.8  desvio=25.9
+raw=1235  filt=1198  V=0.907  media_1s=1185.7  desvio=7.7
+raw=2768  filt=2772  V=2.098  media_1s=1831.0  desvio=663.4
+raw=2767  filt=2769  V=2.096  media_1s=2771.2  desvio=1.6
+raw=2756  filt=2758  V=2.088  media_1s=2765.7  desvio=3.5
+raw=2773  filt=2764  V=2.092  media_1s=2759.8  desvio=2.6
+raw=2742  filt=2754  V=2.085  media_1s=2761.9  desvio=3.2
+raw=2737  filt=2744  V=2.077  media_1s=2748.1  desvio=2.7
+raw=2766  filt=2766  V=2.094  media_1s=2753.3  desvio=9.4
+raw=2790  filt=2787  V=2.110  media_1s=2773.2  desvio=7.7
+raw= 970  filt=1168  V=0.884  media_1s=2029.0  desvio=610.9
+raw= 793  filt= 778  V=0.589  media_1s=895.5  desvio=127.3
+raw=2812  filt=2802  V=2.121  media_1s=2008.8  desvio=809.6
+raw=2774  filt=2781  V=2.105  media_1s=2793.9  desvio=11.4
+raw=2793  filt=2788  V=2.111  media_1s=2779.0  desvio=3.8
+raw=2172  filt=2162  V=1.637  media_1s=2491.4  desvio=268.4
+raw=2807  filt=2802  V=2.121  media_1s=2484.8  desvio=263.6
+raw=2779  filt=2782  V=2.106  media_1s=2793.2  desvio=5.5
+raw=2559  filt=2722  V=2.061  media_1s=2767.5  desvio=12.2
+raw=2185  filt=2254  V=1.706  media_1s=2298.9  desvio=151.2
+raw= 976  filt=1105  V=0.837  media_1s=1900.0  desvio=401.4
+raw=1072  filt=1025  V=0.776  media_1s=1002.5  desvio=29.3
+raw= 997  filt=1045  V=0.791  media_1s=1064.9  desvio=15.5
+raw=1107  filt=1099  V=0.832  media_1s=1094.7  desvio=17.1
+raw=1131  filt=1111  V=0.841  media_1s=1107.5  desvio=13.7
+raw=1200  filt=1132  V=0.857  media_1s=1125.0  desvio=15.7
+raw=1163  filt=1165  V=0.882  media_1s=1133.0  desvio=22.7
+raw=1061  filt=1158  V=0.877  media_1s=1149.5  desvio=13.1
+raw=1103  filt=1086  V=0.822  media_1s=1232.1  desvio=158.5
+raw=1147  filt=1133  V=0.858  media_1s=1114.9  desvio=22.4
+raw=1201  filt=1137  V=0.861  media_1s=1149.0  desvio=9.8
+raw=2310  filt=2574  V=1.949  media_1s=1491.3  desvio=474.5
+raw=1094  filt=1119  V=0.847  media_1s=1632.1  desvio=466.1
+raw= 988  filt= 976  V=0.739  media_1s=1018.7  desvio=53.5
+raw= 929  filt= 904  V=0.684  media_1s=935.0  desvio=23.5
+raw= 878  filt= 871  V=0.659  media_1s=889.0  desvio=11.4
+raw= 770  filt= 796  V=0.603  media_1s=857.2  desvio=25.5
+raw= 727  filt= 717  V=0.543  media_1s=726.1  desvio=34.1
+raw= 736  filt= 753  V=0.570  media_1s=735.9  desvio=11.8
+raw= 673  filt= 701  V=0.531  media_1s=709.8  desvio=16.7
+raw= 684  filt= 695  V=0.526  media_1s=697.9  desvio=8.8
+raw= 635  filt= 650  V=0.492  media_1s=679.4  desvio=21.6
+raw= 627  filt= 637  V=0.482  media_1s=651.1  desvio=7.3
+raw= 592  filt= 582  V=0.441  media_1s=622.6  desvio=22.0
+raw=2755  filt=2767  V=2.095  media_1s=1659.5  desvio=924.3
+raw=2768  filt=2763  V=2.092  media_1s=2763.2  desvio=2.2
+raw=2784  filt=2778  V=2.103  media_1s=2771.7  desvio=4.0
+raw=2761  filt=2767  V=2.095  media_1s=2768.7  desvio=6.3
+raw=2768  filt=2764  V=2.092  media_1s=2762.7  desvio=2.4
+raw=2759  filt=2762  V=2.091  media_1s=2761.9  desvio=1.3
+raw=2765  filt=2759  V=2.089  media_1s=2760.8  desvio=2.0
+raw=2755  filt=2757  V=2.087  media_1s=2756.8  desvio=0.9
+raw=2755  filt=2762  V=2.091  media_1s=2757.4  desvio=2.4
+raw=2755  filt=2753  V=2.084  media_1s=2756.8  desvio=3.8
+raw=2749  filt=2754  V=2.085  media_1s=2752.9  desvio=2.1
+raw=2756  filt=2749  V=2.081  media_1s=2751.6  desvio=2.5
+raw=2756  filt=2749  V=2.081  media_1s=2747.9  desvio=1.2
+raw=2754  filt=2754  V=2.085  media_1s=2750.5  desvio=2.2
+raw=2752  filt=2754  V=2.085  media_1s=2755.0  desvio=0.9
+raw=2759  filt=2763  V=2.092  media_1s=2760.8  desvio=3.0
+raw=2775  filt=2772  V=2.098  media_1s=2768.7  desvio=1.9
+raw=2773  filt=2777  V=2.102  media_1s=2775.5  desvio=1.7
+raw=2775  filt=2780  V=2.105  media_1s=2777.3  desvio=2.5
+raw=2800  filt=2789  V=2.111  media_1s=2786.8  desvio=2.2
+raw=2790  filt=2788  V=2.111  media_1s=2788.1  desvio=1.0
+raw=2794  filt=2791  V=2.113  media_1s=2790.4  desvio=1.3
+raw=2794  filt=2792  V=2.114  media_1s=2791.3  desvio=1.0
+raw=2783  filt=2790  V=2.112  media_1s=2790.8  desvio=1.4
+raw=2786  filt=2664  V=2.017  media_1s=2553.0  desvio=125.1
+raw= 886  filt= 951  V=0.720  media_1s=2260.9  desvio=642.7
+raw= 886  filt= 990  V=0.749  media_1s=988.4  desvio=33.4
+raw= 937  filt= 940  V=0.712  media_1s=944.9  desvio=10.5
+raw=1050  filt= 978  V=0.740  media_1s=979.1  desvio=9.3
+raw=1008  filt= 987  V=0.747  media_1s=971.4  desvio=14.3
+raw=1090  filt=1015  V=0.768  media_1s=988.3  desvio=13.2
+raw=1039  filt= 984  V=0.745  media_1s=1095.5  desvio=122.5
+raw= 976  filt=1043  V=0.790  media_1s=1039.2  desvio=17.2
+raw=1088  filt=1051  V=0.796  media_1s=1044.5  desvio=7.5
+raw=1153  filt=1085  V=0.821  media_1s=1073.0  desvio=12.2
+raw=1149  filt=1100  V=0.833  media_1s=1100.8  desvio=6.9
+raw=1174  filt=1162  V=0.880  media_1s=1126.2  desvio=20.2
+raw=1115  filt=1128  V=0.854  media_1s=1141.3  desvio=10.8
+raw=2809  filt=2805  V=2.123  media_1s=1953.2  desvio=714.2
+raw=2815  filt=2810  V=2.127  media_1s=2808.7  desvio=1.8
+raw=2800  filt=2802  V=2.121  media_1s=2804.6  desvio=2.0
+raw=2790  filt=2789  V=2.111  media_1s=2793.3  desvio=2.7
+raw=2795  filt=2795  V=2.116  media_1s=2791.4  desvio=6.6
+raw=2771  filt=2777  V=2.102  media_1s=2787.5  desvio=4.1
+raw=2777  filt=2778  V=2.103  media_1s=2764.5  desvio=14.2
+raw=2785  filt=2790  V=2.112  media_1s=2774.2  desvio=12.7
+raw=2768  filt=2775  V=2.101  media_1s=2774.9  desvio=6.9
+raw=2754  filt=2760  V=2.089  media_1s=2761.9  desvio=3.2
+raw=2759  filt=2768  V=2.095  media_1s=2765.9  desvio=3.8
+raw=2741  filt=2752  V=2.083  media_1s=2763.3  desvio=4.6
+raw=2746  filt=2741  V=2.075  media_1s=2746.8  desvio=3.2
+raw=2766  filt=2757  V=2.087  media_1s=2746.7  desvio=5.2
+raw=2766  filt=2751  V=2.083  media_1s=2756.8  desvio=4.9
+raw=2736  filt=2755  V=2.086  media_1s=2760.9  desvio=3.7
+raw=2736  filt=2727  V=2.064  media_1s=2740.1  desvio=8.3
+raw=2765  filt=2752  V=2.083  media_1s=2737.7  desvio=6.8
+raw=2765  filt=2752  V=2.083  media_1s=2754.9  desvio=2.0
+raw=2768  filt=2761  V=2.090  media_1s=2757.6  desvio=4.4
+raw=2750  filt=2755  V=2.086  media_1s=2755.6  desvio=1.3
+raw=2768  filt=2764  V=2.092  media_1s=2760.8  desvio=3.0
+raw=2758  filt=2764  V=2.092  media_1s=2766.5  desvio=1.4
+raw=2758  filt=2753  V=2.084  media_1s=2759.4  desvio=4.6
+raw=2782  filt=2769  V=2.096  media_1s=2763.8  desvio=4.4
+raw=2753  filt=2755  V=2.086  media_1s=2756.6  desvio=5.4
+raw=2755  filt=2749  V=2.081  media_1s=2753.2  desvio=3.1
+raw=2737  filt=2736  V=2.071  media_1s=2738.2  desvio=10.4
+raw=2768  filt=2765  V=2.093  media_1s=2749.3  desvio=12.3
+raw=2794  filt=2782  V=2.106  media_1s=2770.4  desvio=5.2
+raw=2770  filt=2767  V=2.095  media_1s=2775.1  desvio=5.8
+raw=2769  filt=2776  V=2.101  media_1s=2772.8  desvio=3.7
+raw=2800  filt=2794  V=2.115  media_1s=2738.2  desvio=37.3
+raw=2784  filt=2781  V=2.105  media_1s=2788.8  desvio=5.5
+raw=2795  filt=2786  V=2.109  media_1s=2783.9  desvio=0.9
+raw=2789  filt=2786  V=2.109  media_1s=2785.8  desvio=1.0
+raw=2794  filt=2800  V=2.120  media_1s=2792.6  desvio=6.2
+raw=2786  filt=2790  V=2.112  media_1s=2793.4  desvio=2.6
+raw=2797  filt=2797  V=2.117  media_1s=2788.9  desvio=3.4
+raw=2581  filt=2751  V=2.083  media_1s=2799.2  desvio=12.7
+raw=2301  filt=2612  V=1.977  media_1s=2577.3  desvio=78.4
+raw=2402  filt=2403  V=1.819  media_1s=2408.7  desvio=53.9
+raw=2471  filt=2500  V=1.893  media_1s=2455.6  desvio=48.7
+raw=2698  filt=2636  V=1.996  media_1s=2838.3  desvio=330.3
+raw=3952  filt=3828  V=2.898  media_1s=2848.6  desvio=382.0
+raw=4095  filt=4095  V=3.100  media_1s=4042.7  desvio=64.5
+raw=4095  filt=4095  V=3.100  media_1s=4089.4  desvio=6.7
+raw=2611  filt=2825  V=2.139  media_1s=3448.8  desvio=388.0
+raw=2626  filt=2632  V=1.992  media_1s=2640.3  desvio=46.1
+raw=2640  filt=2638  V=1.997  media_1s=2634.4  desvio=2.1
+raw=2647  filt=2650  V=2.006  media_1s=2645.4  desvio=5.2
+raw=2659  filt=2651  V=2.007  media_1s=2649.0  desvio=1.7
+raw=2646  filt=2649  V=2.005  media_1s=2648.7  desvio=1.8
+raw=2668  filt=2659  V=2.013  media_1s=2654.8  desvio=2.5
+raw=4095  filt=2905  V=2.199  media_1s=2636.8  desvio=76.5
+raw=2767  filt=2767  V=2.095  media_1s=3008.8  desvio=273.9
+raw=2767  filt=2767  V=2.095  media_1s=2766.9  desvio=1.0
+raw=2770  filt=2771  V=2.098  media_1s=2770.6  desvio=1.2
+raw=2779  filt=2776  V=2.101  media_1s=2772.8  desvio=1.2
+raw=2779  filt=2782  V=2.106  media_1s=2777.7  desvio=2.8
+raw=2789  filt=2788  V=2.111  media_1s=2782.8  desvio=2.3
+raw=3874  filt=3315  V=2.510  media_1s=2761.1  desvio=188.6
+raw=4095  filt=4095  V=3.100  media_1s=3981.8  desvio=158.7
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=2800  filt=2829  V=2.142  media_1s=3730.4  desvio=454.8
+raw=2767  filt=2767  V=2.095  media_1s=2774.3  desvio=9.6
+raw=2786  filt=2772  V=2.098  media_1s=2761.9  desvio=4.7
+raw=2752  filt=2764  V=2.092  media_1s=2769.4  desvio=3.7
+raw=2761  filt=2753  V=2.084  media_1s=2757.2  desvio=2.8
+raw=2740  filt=2745  V=2.078  media_1s=2748.0  desvio=1.4
+raw=2736  filt=2735  V=2.070  media_1s=2739.1  desvio=3.3
+raw=2736  filt=2730  V=2.067  media_1s=2730.9  desvio=1.4
+raw=2313  filt=2479  V=1.877  media_1s=2691.7  desvio=73.8
+raw=2737  filt=2664  V=2.017  media_1s=2384.8  desvio=116.1
+raw=2124  filt=2119  V=1.604  media_1s=2563.2  desvio=225.4
+raw=2099  filt=2111  V=1.598  media_1s=2127.3  desvio=5.9
+raw=2711  filt=2237  V=1.693  media_1s=2111.2  desvio=32.1
+raw=2747  filt=2739  V=2.073  media_1s=2671.6  desvio=128.7
+raw=2754  filt=2745  V=2.078  media_1s=2738.8  desvio=2.1
+raw=2743  filt=2746  V=2.079  media_1s=2747.3  desvio=1.4
+raw=2758  filt=2754  V=2.085  media_1s=2749.6  desvio=2.8
+raw=2765  filt=2758  V=2.088  media_1s=2756.2  desvio=1.5
+raw=2779  filt=2769  V=2.096  media_1s=2764.4  desvio=3.2
+raw=2774  filt=2777  V=2.102  media_1s=2773.2  desvio=2.3
+raw=2774  filt=2776  V=2.101  media_1s=2778.0  desvio=2.0
+raw=2768  filt=2772  V=2.098  media_1s=2775.0  desvio=1.7
+raw=2763  filt=2762  V=2.091  media_1s=2766.9  desvio=2.1
+raw=2752  filt=2750  V=2.082  media_1s=2756.2  desvio=3.7
+raw=2743  filt=2740  V=2.074  media_1s=2743.1  desvio=2.8
+raw=2734  filt=2742  V=2.076  media_1s=2740.1  desvio=1.3
+raw=2738  filt=2737  V=2.072  media_1s=2738.4  desvio=1.2
+raw=2757  filt=2749  V=2.081  media_1s=2745.5  desvio=2.4
+raw=2761  filt=2757  V=2.087  media_1s=2752.9  desvio=3.1
+raw=2777  filt=2771  V=2.098  media_1s=2764.4  desvio=4.0
+raw=2782  filt=2778  V=2.103  media_1s=2774.3  desvio=1.9
+raw=2766  filt=2772  V=2.098  media_1s=2774.8  desvio=2.5
+raw=2769  filt=2763  V=2.092  media_1s=2766.1  desvio=2.7
+raw=2750  filt=2754  V=2.085  media_1s=2758.5  desvio=3.9
+raw=2741  filt=2742  V=2.076  media_1s=2745.6  desvio=3.7
+raw=2731  filt=2737  V=2.072  media_1s=2741.2  desvio=3.3
+raw=2770  filt=2757  V=2.087  media_1s=2741.9  desvio=7.3
+raw=2748  filt=2751  V=2.083  media_1s=2755.3  desvio=2.9
+raw=2747  filt=2748  V=2.080  media_1s=2749.8  desvio=1.1
+raw=2758  filt=2754  V=2.085  media_1s=2750.4  desvio=2.8
+raw=2759  filt=2758  V=2.088  media_1s=2754.8  desvio=1.9
+raw=2765  filt=2764  V=2.092  media_1s=2760.2  desvio=2.6
+raw=2773  filt=2766  V=2.094  media_1s=2764.8  desvio=0.9
+raw=2759  filt=2767  V=2.095  media_1s=2768.8  desvio=1.9
+raw=2774  filt=2771  V=2.098  media_1s=2770.2  desvio=1.5
+raw=2790  filt=2783  V=2.107  media_1s=2776.2  desvio=4.1
+raw=2827  filt=2818  V=2.133  media_1s=2798.1  desvio=10.7
+raw=2817  filt=2820  V=2.135  media_1s=2819.7  desvio=0.7
+raw=2821  filt=2825  V=2.139  media_1s=2821.8  desvio=2.1
+raw=2820  filt=2824  V=2.138  media_1s=2823.5  desvio=1.2
+raw=2824  filt=2821  V=2.136  media_1s=2822.8  desvio=1.1
+raw=2826  filt=2820  V=2.135  media_1s=2820.2  desvio=1.8
+raw=2806  filt=2819  V=2.134  media_1s=2817.6  desvio=1.2
+raw=2817  filt=2811  V=2.128  media_1s=2813.0  desvio=2.6
+raw=2799  filt=2803  V=2.122  media_1s=2808.3  desvio=3.1
+raw=2797  filt=2795  V=2.116  media_1s=2799.5  desvio=2.1
+raw=2800  filt=2795  V=2.116  media_1s=2794.8  desvio=0.9
+raw=2801  filt=2791  V=2.113  media_1s=2790.9  desvio=3.0
+raw=2780  filt=2785  V=2.108  media_1s=2787.1  desvio=1.7
+raw=2787  filt=2790  V=2.112  media_1s=2786.0  desvio=2.5
+raw=2789  filt=2788  V=2.111  media_1s=2786.3  desvio=1.5
+raw=2800  filt=2790  V=2.112  media_1s=2787.8  desvio=1.2
+raw=2783  filt=2789  V=2.111  media_1s=2788.2  desvio=1.7
+raw=2799  filt=2791  V=2.113  media_1s=2789.0  desvio=1.2
+raw=2786  filt=2793  V=2.114  media_1s=2792.2  desvio=0.9
+raw=2802  filt=2798  V=2.118  media_1s=2795.4  desvio=2.1
+raw=2800  filt=2803  V=2.122  media_1s=2799.7  desvio=2.8
+raw=2800  filt=2807  V=2.125  media_1s=2804.3  desvio=1.4
+raw=2810  filt=2811  V=2.128  media_1s=2809.2  desvio=1.9
+raw=2810  filt=2815  V=2.131  media_1s=2811.9  desvio=1.6
+raw=2820  filt=2819  V=2.134  media_1s=2817.7  desvio=1.4
+raw=2819  filt=2823  V=2.137  media_1s=2821.2  desvio=1.2
+raw=2819  filt=2825  V=2.139  media_1s=2824.3  desvio=1.5
+raw=2832  filt=2828  V=2.141  media_1s=2825.8  desvio=0.8
+raw=2831  filt=2831  V=2.143  media_1s=2828.9  desvio=1.1
+raw=2818  filt=2826  V=2.139  media_1s=2828.7  desvio=1.0
+raw=2829  filt=2827  V=2.140  media_1s=2826.4  desvio=1.2
+raw=2825  filt=2823  V=2.137  media_1s=2826.2  desvio=1.6
+raw=2817  filt=2816  V=2.132  media_1s=2819.8  desvio=2.9
+raw=2815  filt=2819  V=2.134  media_1s=2816.8  desvio=1.3
+raw=2815  filt=2811  V=2.128  media_1s=2812.7  desvio=2.2
+raw=2800  filt=2804  V=2.123  media_1s=2807.2  desvio=2.3
+raw=2789  filt=2799  V=2.119  media_1s=2801.2  desvio=1.5
+raw=2803  filt=2795  V=2.116  media_1s=2794.9  desvio=1.4
+raw=2788  filt=2794  V=2.115  media_1s=2794.4  desvio=0.8
+raw=2797  filt=2792  V=2.114  media_1s=2789.4  desvio=2.2
+raw=2778  filt=2788  V=2.111  media_1s=2792.3  desvio=1.5
+raw=2788  filt=2790  V=2.112  media_1s=2789.2  desvio=1.0
+raw=2787  filt=2792  V=2.114  media_1s=2791.4  desvio=2.2
+raw=2800  filt=2797  V=2.117  media_1s=2794.1  desvio=1.5
+raw=2803  filt=2795  V=2.116  media_1s=2796.3  desvio=1.0
+raw=2799  filt=2799  V=2.119  media_1s=2795.7  desvio=1.6
+raw=2802  filt=2795  V=2.116  media_1s=2796.6  desvio=1.9
+raw=2802  filt=2798  V=2.118  media_1s=2797.2  desvio=1.9
+raw=2803  filt=2804  V=2.123  media_1s=2799.7  desvio=2.0
+raw=2818  filt=2810  V=2.127  media_1s=2805.2  desvio=2.6
+raw=2811  filt=2815  V=2.131  media_1s=2811.9  desvio=1.9
+raw=2832  filt=2822  V=2.136  media_1s=2817.7  desvio=2.3
+raw=2827  filt=2831  V=2.143  media_1s=2829.6  desvio=2.6
+raw=2810  filt=2812  V=2.129  media_1s=2819.4  desvio=6.2
+raw=2817  filt=2811  V=2.128  media_1s=2809.2  desvio=1.8
+raw=2817  filt=2814  V=2.130  media_1s=2810.3  desvio=2.0
+raw=2807  filt=2806  V=2.124  media_1s=2808.2  desvio=4.2
+raw=2794  filt=2799  V=2.119  media_1s=2803.1  desvio=1.9
+raw=2782  filt=2790  V=2.112  media_1s=2794.9  desvio=2.1
+raw=2799  filt=2794  V=2.115  media_1s=2793.3  desvio=1.7
+raw=2758  filt=2763  V=2.092  media_1s=2785.2  desvio=11.0
+raw=2790  filt=2784  V=2.108  media_1s=2771.9  desvio=7.1
+raw=2783  filt=2787  V=2.110  media_1s=2784.8  desvio=1.9
+raw=2793  filt=2790  V=2.112  media_1s=2784.6  desvio=2.9
+raw=2801  filt=2797  V=2.117  media_1s=2794.9  desvio=1.8
+raw=2791  filt=2795  V=2.116  media_1s=2798.6  desvio=1.5
+raw=2800  filt=2800  V=2.120  media_1s=2793.9  desvio=3.6
+raw=2810  filt=2807  V=2.125  media_1s=2801.9  desvio=2.2
+raw=2800  filt=2808  V=2.126  media_1s=2807.6  desvio=0.9
+raw=2807  filt=2812  V=2.129  media_1s=2810.8  desvio=1.3
+raw=2825  filt=2820  V=2.135  media_1s=2816.5  desvio=2.2
+raw=2829  filt=2824  V=2.138  media_1s=2821.6  desvio=2.1
+raw=2829  filt=2829  V=2.142  media_1s=2827.3  desvio=1.7
+raw=2833  filt=2834  V=2.145  media_1s=2832.4  desvio=1.7
+raw=2835  filt=2834  V=2.145  media_1s=2833.2  desvio=0.9
+raw=2828  filt=2832  V=2.144  media_1s=2832.7  desvio=1.1
+raw=2834  filt=2831  V=2.143  media_1s=2832.3  desvio=0.8
+raw=2832  filt=2830  V=2.142  media_1s=2830.8  desvio=0.9
+raw=2834  filt=2831  V=2.143  media_1s=2829.9  desvio=1.0
+raw=2825  filt=2826  V=2.139  media_1s=2828.2  desvio=1.7
+raw=2826  filt=2827  V=2.140  media_1s=2827.1  desvio=0.8
+raw=2819  filt=2824  V=2.138  media_1s=2823.8  desvio=1.5
+raw=2827  filt=2824  V=2.138  media_1s=2824.9  desvio=0.7
+raw=2827  filt=2821  V=2.136  media_1s=2824.2  desvio=1.5
+raw=2826  filt=2822  V=2.136  media_1s=2821.8  desvio=0.7
+raw=2827  filt=2824  V=2.138  media_1s=2824.8  desvio=0.8
+raw=2821  filt=2825  V=2.139  media_1s=2823.2  desvio=0.9
+raw=2830  filt=2822  V=2.136  media_1s=2822.4  desvio=1.3
+raw=2816  filt=2819  V=2.134  media_1s=2821.3  desvio=1.1
+raw=2810  filt=2816  V=2.132  media_1s=2819.1  desvio=1.4
+raw=2818  filt=2820  V=2.135  media_1s=2819.5  desvio=1.5
+raw=2823  filt=2819  V=2.134  media_1s=2819.5  desvio=0.7
+raw=2804  filt=2816  V=2.132  media_1s=2817.4  desvio=1.6
+raw=2813  filt=2816  V=2.132  media_1s=2815.2  desvio=2.9
+raw=2779  filt=2793  V=2.114  media_1s=2804.6  desvio=4.8
+raw=2789  filt=2795  V=2.116  media_1s=2788.7  desvio=3.6
+raw=3150  filt=2980  V=2.256  media_1s=2820.2  desvio=51.5
+raw=3167  filt=3158  V=2.391  media_1s=3133.5  desvio=32.3
+raw=3151  filt=3168  V=2.398  media_1s=3163.7  desvio=3.4
+raw=3170  filt=3166  V=2.397  media_1s=3169.8  desvio=3.5
+raw=3159  filt=3166  V=2.397  media_1s=3164.8  desvio=3.5
+raw=2810  filt=2801  V=2.120  media_1s=3030.6  desvio=149.7
+raw=2831  filt=2828  V=2.141  media_1s=2816.8  desvio=8.0
+raw=2819  filt=2832  V=2.144  media_1s=2831.6  desvio=1.4
+raw=2834  filt=2834  V=2.145  media_1s=2831.4  desvio=1.8
+raw=2845  filt=2835  V=2.146  media_1s=2833.9  desvio=0.6
+raw=2827  filt=2827  V=2.140  media_1s=2829.6  desvio=2.7
+raw=2807  filt=2823  V=2.137  media_1s=2828.7  desvio=1.7
+raw=2698  filt=2789  V=2.111  media_1s=2814.6  desvio=6.8
+raw=2279  filt=2364  V=1.790  media_1s=2557.0  desvio=120.2
+raw=2870  filt=2803  V=2.122  media_1s=2381.7  desvio=220.1
+raw=2370  filt=2522  V=1.909  media_1s=2782.2  desvio=112.0
+raw=2663  filt=2862  V=2.167  media_1s=2773.1  desvio=105.9
+raw=2313  filt=2524  V=1.911  media_1s=2891.4  desvio=144.2
+raw=2340  filt=2337  V=1.769  media_1s=2246.9  desvio=107.1
+raw=2358  filt=2345  V=1.775  media_1s=2342.5  desvio=3.6
+raw=2819  filt=2618  V=1.982  media_1s=2387.0  desvio=77.7
+raw=2823  filt=2823  V=2.137  media_1s=2808.1  desvio=37.4
+raw=3187  filt=3099  V=2.346  media_1s=2871.3  desvio=86.8
+raw=3187  filt=3178  V=2.406  media_1s=3133.0  desvio=44.7
+raw=3179  filt=3176  V=2.404  media_1s=3174.3  desvio=3.2
+raw=3178  filt=3175  V=2.404  media_1s=3176.8  desvio=2.2
+raw=3181  filt=3172  V=2.401  media_1s=3175.1  desvio=3.2
+raw=3200  filt=3176  V=2.404  media_1s=3175.8  desvio=1.9
+raw=2813  filt=2816  V=2.132  media_1s=2888.4  desvio=111.3
+raw=2803  filt=2804  V=2.123  media_1s=2814.1  desvio=4.2
+raw=3655  filt=3277  V=2.481  media_1s=2961.8  desvio=182.7
+raw=3781  filt=3784  V=2.865  media_1s=3753.4  desvio=133.3
+raw=4069  filt=4014  V=3.039  media_1s=3861.7  desvio=82.1
+raw=4095  filt=4095  V=3.100  media_1s=4082.9  desvio=18.1
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4095  filt=4095  V=3.100  media_1s=4095.0  desvio=0.0
+raw=4045  filt=4088  V=3.095  media_1s=4094.7  desvio=1.5
+raw=3898  filt=3933  V=2.977  media_1s=3981.3  desvio=39.8
+raw=3404  filt=3548  V=2.686  media_1s=3854.9  desvio=135.2
+raw=2927  filt=3278  V=2.482  media_1s=3456.0  desvio=70.6
+raw=3056  filt=3114  V=2.357  media_1s=3141.7  desvio=34.9
+raw=2331  filt=2316  V=1.753  media_1s=2533.9  desvio=285.1
+raw=2301  filt=2196  V=1.662  media_1s=2279.9  desvio=47.4
+raw=2331  filt=2358  V=1.785  media_1s=2214.4  desvio=56.0
+raw=2766  filt=2647  V=2.004  media_1s=2464.2  desvio=129.1
+raw=2749  filt=2781  V=2.105  media_1s=2760.6  desvio=25.5
+raw=2736  filt=2722  V=2.061  media_1s=2737.8  desvio=17.7
+raw=2732  filt=2717  V=2.057  media_1s=2730.3  desvio=9.6
+raw=3135  filt=3026  V=2.291  media_1s=2797.8  desvio=98.3
+raw=2055  filt=2588  V=1.959  media_1s=2926.8  desvio=116.8
+raw=2289  filt=2291  V=1.734  media_1s=2279.9  desvio=71.6
+raw=2588  filt=2611  V=1.977  media_1s=2370.4  desvio=102.1
+raw=2503  filt=2492  V=1.886  media_1s=2573.7  desvio=57.6
+raw=2503  filt=2513  V=1.902  media_1s=2501.6  desvio=6.7
+raw=2502  filt=2506  V=1.897  media_1s=2507.6  desvio=2.3
+raw=2498  filt=2492  V=1.886  media_1s=2494.8  desvio=5.8
+raw=2496  filt=2506  V=1.897  media_1s=2415.5  desvio=89.6
+raw=2511  filt=2495  V=1.889  media_1s=2500.2  desvio=5.7
+raw=2497  filt=2509  V=1.899  media_1s=2499.4  desvio=4.7
+raw=2555  filt=2551  V=1.931  media_1s=2526.2  desvio=15.4
+raw=2752  filt=2351  V=1.780  media_1s=2182.6  desvio=326.0
+raw=3213  filt=2894  V=2.191  media_1s=2734.2  desvio=85.0
+raw=3138  filt=3149  V=2.384  media_1s=3108.3  desvio=69.1
+raw=3121  filt=3181  V=2.408  media_1s=3138.2  desvio=23.9
+raw=2515  filt=2449  V=1.854  media_1s=2908.5  desvio=265.5
+raw=2559  filt=2419  V=1.831  media_1s=2512.6  desvio=46.5
+raw=2661  filt=2549  V=1.930  media_1s=2529.2  desvio=56.9
+raw=2764  filt=2762  V=2.091  media_1s=2292.3  desvio=309.3
+raw=2783  filt=2775  V=2.101  media_1s=2766.7  desvio=3.5
+raw=2801  filt=2798  V=2.118  media_1s=2790.4  desvio=6.9
+raw=2639  filt=2827  V=2.140  media_1s=2814.9  desvio=13.8
+raw=2896  filt=2892  V=2.189  media_1s=2843.6  desvio=45.0
+raw=2896  filt=2898  V=2.194  media_1s=2891.6  desvio=2.5
+raw=2406  filt=2439  V=1.846  media_1s=2724.2  desvio=180.1
+raw=2511  filt=2376  V=1.799  media_1s=2394.0  desvio=19.5
+raw=2809  filt=2817  V=2.133  media_1s=2765.6  desvio=141.4
+raw=2774  filt=2781  V=2.105  media_1s=2787.2  desvio=8.9
+raw=2791  filt=2787  V=2.110  media_1s=2779.8  desvio=4.4
+raw=2791  filt=2785  V=2.108  media_1s=2787.2  desvio=2.6
+raw=3152  filt=3019  V=2.285  media_1s=2810.2  desvio=70.3
+raw=3148  filt=3150  V=2.385  media_1s=3145.4  desvio=24.7
+raw=2735  filt=2762  V=2.091  media_1s=3008.4  desvio=139.0
+raw=2547  filt=2546  V=1.927  media_1s=2631.2  desvio=71.3
+raw=2765  filt=2633  V=1.993  media_1s=2563.6  desvio=26.5
+raw=3152  filt=3159  V=2.391  media_1s=3033.3  desvio=165.1
+raw=3182  filt=3164  V=2.395  media_1s=3161.2  desvio=2.2
+raw=2723  filt=2863  V=2.167  media_1s=3112.7  desvio=93.7
+raw=2769  filt=2766  V=2.094  media_1s=2478.9  desvio=208.2
+raw=2795  filt=2797  V=2.117  media_1s=2792.2  desvio=10.2
+raw=2798  filt=2805  V=2.123  media_1s=2800.8  desvio=4.9
+raw=2813  filt=2804  V=2.123  media_1s=2802.2  desvio=1.1
+raw=2778  filt=2793  V=2.114  media_1s=2799.9  desvio=4.5
+raw=2785  filt=2777  V=2.102  media_1s=2785.8  desvio=5.8
+raw=2783  filt=2773  V=2.099  media_1s=2773.1  desvio=1.9
+raw=2779  filt=2776  V=2.101  media_1s=2774.8  desvio=1.1
+raw=2768  filt=2773  V=2.099  media_1s=2776.6  desvio=3.2
+raw=2763  filt=2749  V=2.081  media_1s=2762.7  desvio=9.5
+raw=2773  filt=2761  V=2.090  media_1s=2754.0  desvio=2.8
+raw=2758  filt=2765  V=2.093  media_1s=2764.6  desvio=1.2
+raw=2771  filt=2773  V=2.099  media_1s=2768.8  desvio=3.2
+raw=2800  filt=2791  V=2.113  media_1s=2780.9  desvio=6.6
+raw=2813  filt=2805  V=2.123  media_1s=2791.8  desvio=6.0
+raw=2816  filt=2820  V=2.135  media_1s=2813.2  desvio=4.6
+raw=2831  filt=2826  V=2.139  media_1s=2822.1  desvio=2.3
+raw=2823  filt=2811  V=2.128  media_1s=2822.3  desvio=6.0
+raw=2811  filt=2809  V=2.126  media_1s=2810.6  desvio=2.9
+raw=2814  filt=2818  V=2.133  media_1s=2813.9  desvio=2.6
+raw=2800  filt=2804  V=2.123  media_1s=2812.8  desvio=4.9
+raw=2803  filt=2799  V=2.119  media_1s=2801.8  desvio=2.4
+raw=2803  filt=2797  V=2.117  media_1s=2797.1  desvio=1.3
+raw=2802  filt=2800  V=2.120  media_1s=2798.2  desvio=1.7
+raw=2802  filt=2807  V=2.125  media_1s=2803.6  desvio=2.7
+raw=2818  filt=2816  V=2.132  media_1s=2811.2  desvio=3.4
+raw=2832  filt=2830  V=2.142  media_1s=2822.0  desvio=4.1
+raw=2843  filt=2838  V=2.148  media_1s=2835.4  desvio=2.2
+raw=2835  filt=2840  V=2.150  media_1s=2837.9  desvio=1.1
+raw=2823  filt=2829  V=2.142  media_1s=2834.6  desvio=3.4
+raw=2822  filt=2822  V=2.136  media_1s=2823.8  desvio=2.5
+raw=2814  filt=2808  V=2.126  media_1s=2814.9  desvio=4.7
+raw=2805  filt=2804  V=2.123  media_1s=2805.0  desvio=1.1
+raw=2800  filt=2797  V=2.117  media_1s=2799.5  desvio=2.0
+raw=2811  filt=2802  V=2.121  media_1s=2800.7  desvio=1.7
+raw=2805  filt=2807  V=2.125  media_1s=2803.8  desvio=1.5
+raw=2811  filt=2813  V=2.129  media_1s=2808.7  desvio=2.4
+raw=2818  filt=2818  V=2.133  media_1s=2816.4  desvio=1.8
+raw=2831  filt=2829  V=2.142  media_1s=2824.9  desvio=3.8
+raw=2839  filt=2836  V=2.147  media_1s=2833.6  desvio=2.6
+raw=2838  filt=2838  V=2.148  media_1s=2836.8  desvio=1.5
+raw=2823  filt=2831  V=2.143  media_1s=2836.2  desvio=2.2
+raw=2816  filt=2826  V=2.139  media_1s=2829.6  desvio=2.2
+raw=2813  filt=2815  V=2.131  media_1s=2821.2  desvio=3.3
+raw=2800  filt=2806  V=2.124  media_1s=2811.9  desvio=3.2
+raw=2806  filt=2798  V=2.118  media_1s=2802.7  desvio=2.1
+raw=2800  filt=2799  V=2.119  media_1s=2800.2  desvio=1.7
+raw=2812  filt=2805  V=2.123  media_1s=2801.2  desvio=1.9
+raw=2818  filt=2813  V=2.129  media_1s=2807.9  desvio=2.7
+raw=2827  filt=2826  V=2.139  media_1s=2818.4  desvio=3.8
+raw=2845  filt=2835  V=2.146  media_1s=2831.2  desvio=2.7
+raw=2845  filt=2838  V=2.148  media_1s=2835.8  desvio=1.0
+raw=2837  filt=2834  V=2.145  media_1s=2836.4  desvio=1.7
+raw=2832  filt=2827  V=2.140  media_1s=2829.2  desvio=2.6
+raw=2814  filt=2812  V=2.129  media_1s=2819.6  desvio=4.7
+raw=2811  filt=2805  V=2.123  media_1s=2806.8  desvio=3.3
+raw=2813  filt=2800  V=2.120  media_1s=2801.8  desvio=1.8
+raw=2803  filt=2803  V=2.122  media_1s=2802.8  desvio=1.1
+raw=2813  filt=2810  V=2.127  media_1s=2805.1  desvio=2.8
+raw=2821  filt=2821  V=2.136  media_1s=2815.0  desvio=3.0
+raw=2819  filt=2826  V=2.139  media_1s=2823.7  desvio=1.6
+raw=2842  filt=2834  V=2.145  media_1s=2830.6  desvio=2.5
+raw=2832  filt=2835  V=2.146  media_1s=2835.7  desvio=1.3
+raw=2837  filt=2839  V=2.149  media_1s=2838.0  desvio=1.4
+raw=2827  filt=2828  V=2.141  media_1s=2833.2  desvio=3.6
+raw=2809  filt=2815  V=2.131  media_1s=2821.6  desvio=2.9
+raw=2813  filt=2810  V=2.127  media_1s=2810.6  desvio=1.7
+raw=2800  filt=2799  V=2.119  media_1s=2801.9  desvio=2.8
+raw=2800  filt=2797  V=2.117  media_1s=2798.5  desvio=1.1
+raw=2798  filt=2798  V=2.118  media_1s=2798.1  desvio=0.9
+raw=2807  filt=2802  V=2.121  media_1s=2799.8  desvio=1.0
+raw=2813  filt=2808  V=2.126  media_1s=2804.8  desvio=1.6
+raw=2810  filt=2812  V=2.129  media_1s=2810.2  desvio=1.8
+raw=2829  filt=2822  V=2.136  media_1s=2815.8  desvio=4.0
+raw=2832  filt=2827  V=2.140  media_1s=2824.6  desvio=2.0
+raw=2833  filt=2828  V=2.141  media_1s=2826.5  desvio=1.0
+raw=2837  filt=2832  V=2.144  media_1s=2830.1  desvio=1.3
+raw=2830  filt=2833  V=2.145  media_1s=2832.9  desvio=1.1
+raw=2823  filt=2831  V=2.143  media_1s=2830.4  desvio=1.1
+raw=2832  filt=2834  V=2.145  media_1s=2830.7  desvio=1.4
+raw=2837  filt=2829  V=2.142  media_1s=2831.6  desvio=2.2
+raw=2827  filt=2829  V=2.142  media_1s=2828.4  desvio=1.9
+raw=2830  filt=2826  V=2.139  media_1s=2826.7  desvio=1.1
+raw=2825  filt=2824  V=2.138  media_1s=2825.1  desvio=1.0
+raw=2819  filt=2822  V=2.136  media_1s=2823.1  desvio=2.1
+raw=2810  filt=2816  V=2.132  media_1s=2820.3  desvio=2.1
+raw=2820  filt=2814  V=2.130  media_1s=2815.5  desvio=1.7
+raw=2813  filt=2812  V=2.129  media_1s=2813.8  desvio=1.1
+raw=2800  filt=2806  V=2.124  media_1s=2809.4  desvio=2.8
+raw=2800  filt=2803  V=2.122  media_1s=2805.2  desvio=2.0
+raw=2806  filt=2803  V=2.122  media_1s=2805.1  desvio=1.4
+raw=2795  filt=2799  V=2.119  media_1s=2802.7  desvio=1.7
+raw=2801  filt=2801  V=2.120  media_1s=2801.3  desvio=1.9
+raw=2812  filt=2800  V=2.120  media_1s=2800.8  desvio=1.4
+raw=2812  filt=2800  V=2.120  media_1s=2800.4  desvio=0.6
+raw=2795  filt=2799  V=2.119  media_1s=2798.8  desvio=0.6
+raw=2793  filt=2796  V=2.117  media_1s=2798.1  desvio=1.7
+raw=2813  filt=2798  V=2.118  media_1s=2796.2  desvio=0.8
+raw=2807  filt=2795  V=2.116  media_1s=2795.7  desvio=1.4
+raw=2787  filt=2790  V=2.112  media_1s=2790.8  desvio=1.2
+raw=2771  filt=2773  V=2.099  media_1s=2776.9  desvio=8.5
+raw=2783  filt=2776  V=2.101  media_1s=2776.6  desvio=1.9
+raw=2763  filt=2751  V=2.083  media_1s=2758.1  desvio=12.2
+raw=2771  filt=2776  V=2.101  media_1s=2769.4  desvio=6.8
+raw=2337  filt=2566  V=1.943  media_1s=2756.1  desvio=58.7
+raw= 295  filt= 333  V=0.252  media_1s=1444.6  desvio=783.8
+raw=   0  filt=   0  V=0.000  media_1s=104.2  desvio=124.9
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=1015  filt= 415  V=0.314  media_1s=48.5  desvio=107.9
+raw=   0  filt=  14  V=0.011  media_1s=425.4  desvio=377.4
+raw= 861  filt= 895  V=0.678  media_1s=295.2  desvio=351.4
+raw=2511  filt=2486  V=1.882  media_1s=1654.7  desvio=760.6
+raw=2043  filt=2108  V=1.596  media_1s=1836.2  desvio=539.4
+raw=2186  filt=2276  V=1.723  media_1s=2144.4  desvio=88.9
+raw=1964  filt=2006  V=1.519  media_1s=2074.6  desvio=77.6
+raw=2704  filt=2420  V=1.832  media_1s=2171.7  desvio=118.7
+raw=2743  filt=2745  V=2.078  media_1s=2700.5  desvio=76.7
+raw=2748  filt=2751  V=2.083  media_1s=2747.4  desvio=1.9
+raw=2754  filt=2757  V=2.087  media_1s=2753.3  desvio=2.9
+raw=2763  filt=2761  V=2.090  media_1s=2758.7  desvio=1.1
+raw=2787  filt=2774  V=2.100  media_1s=2767.6  desvio=3.3
+raw=2789  filt=2793  V=2.114  media_1s=2785.2  desvio=8.2
+raw=2775  filt=2784  V=2.108  media_1s=2799.2  desvio=14.4
+raw=2695  filt=2769  V=2.096  media_1s=2781.9  desvio=5.7
+raw=2771  filt=2784  V=2.108  media_1s=2776.4  desvio=17.5
+raw=2762  filt=2763  V=2.092  media_1s=2770.8  desvio=7.2
+raw=   0  filt= 932  V=0.706  media_1s=2307.6  desvio=579.4
+raw=   0  filt=   0  V=0.000  media_1s=99.8  desvio=204.9
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=15.6  desvio=16.3
+raw=   0  filt=  38  V=0.029  media_1s=26.9  desvio=15.8
+raw=   0  filt=   0  V=0.000  media_1s=3.5  desvio=10.5
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0
+raw=   0  filt=   0  V=0.000  media_1s=0.0  desvio=0.0

@@ -1,0 +1,425 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15532
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (29) boot: ESP-IDF v5.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 21 2026 14:45:11[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v3.1[0m
+[0;32mI (37) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (60) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (67) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (75) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (82) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (90) boot: End of partition table[0m
+[0;32mI (94) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09c54h ( 40020) map[0m
+[0;32mI (116) esp_image: segment 1: paddr=00019c7c vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (116) esp_image: segment 2: paddr=00019c88 vaddr=3ffb0000 size=0220ch (  8716) load[0m
+[0;32mI (125) esp_image: segment 3: paddr=0001be9c vaddr=40080000 size=0417ch ( 16764) load[0m
+[0;32mI (137) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=14b2ch ( 84780) map[0m
+[0;32mI (168) esp_image: segment 5: paddr=00034b54 vaddr=4008417c size=0864ch ( 34380) load[0m
+[0;32mI (188) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (188) boot: Disabling RNG early entropy source...[0m
+[0;32mI (199) cpu_start: Multicore app[0m
+[0;32mI (208) cpu_start: Pro cpu start user code[0m
+[0;32mI (208) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (208) cpu_start: Application information:[0m
+[0;32mI (211) cpu_start: Project name:     adc_ldr[0m
+[0;32mI (216) cpu_start: App version:      c04a3bf[0m
+[0;32mI (221) cpu_start: Compile time:     Oct 21 2026 14:45:05[0m
+[0;32mI (227) cpu_start: ELF file SHA256:  8bfbba53d...[0m
+[0;32mI (233) cpu_start: ESP-IDF:          v5.2[0m
+[0;32mI (237) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (242) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (247) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (252) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (259) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFB2AF8 len 0002D508 (181 KiB): DRAM[0m
+[0;32mI (271) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (277) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (284) heap_init: At 4008C7C8 len 00013838 (78 KiB): IRAM[0m
+[0;32mI (292) spi_flash: detected chip: generic[0m
+[0;32mI (295) spi_flash: flash io: dio[0m
+[0;33mW (299) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (312) main_task: Started on CPU0[0m
+[0;32mI (322) main_task: Calling app_main()[0m
+raw=   0  filt=   8  V=0.006  media_1s=9.7  desvio=5.5
+raw=   0  filt=  36  V=0.027  media_1s=22.9  desvio=9.9
+raw=   0  filt=  38  V=0.029  media_1s=47.0  desvio=6.1
+ets Jul 29 2019 12:21:46
+
+rst:0x10 (RTCWDT_RTC_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15532
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.2 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Oct 21 2026 14:45:11[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (34) boot: chip revision: v3.1[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (60) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (75) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (82) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (90) boot: End of partition table[0m
+[0;32mI (94) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09c54h ( 40020) map[0m
+[0;32mI (116) esp_image: segment 1: paddr=00019c7c vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (117) esp_image: segment 2: paddr=00019c88 vaddr=3ffb0000 size=0220ch (  8716) load[0m
+[0;32mI (125) esp_image: segment 3: paddr=0001be9c vaddr=40080000 size=0417ch ( 16764) load[0m
+[0;32mI (137) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=14b2ch ( 84780) map[0m
+[0;32mI (168) esp_image: segment 5: paddr=00034b54 vaddr=4008417c size=0864ch ( 34380) load[0m
+[0;32mI (188) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (188) boot: Disabling RNG early entropy source...[0m
+[0;32mI (200) cpu_start: Multicore app[0m
+[0;32mI (209) cpu_start: Pro cpu start user code[0m
+[0;32mI (209) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (209) cpu_start: Application information:[0m
+[0;32mI (212) cpu_start: Project name:     adc_ldr[0m
+[0;32mI (217) cpu_start: App version:      c04a3bf[0m
+[0;32mI (222) cpu_start: Compile time:     Oct 21 2026 14:45:05[0m
+[0;32mI (228) cpu_start: ELF file SHA256:  8bfbba53d...[0m
+[0;32mI (233) cpu_start: ESP-IDF:          v5.2[0m
+[0;32mI (238) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (242) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (247) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (252) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (259) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFB2AF8 len 0002D508 (181 KiB): DRAM[0m
+[0;32mI (271) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (278) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (284) heap_init: At 4008C7C8 len 00013838 (78 KiB): IRAM[0m
+[0;32mI (292) spi_flash: detected chip: generic[0m
+[0;32mI (295) spi_flash: flash io: dio[0m
+[0;33mW (299) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (313) main_task: Started on CPU0[0m
+[0;32mI (323) main_task: Calling app_main()[0m
+raw=   0  filt=   0  V=0.000  media_1s=27.6  desvio=15.1
+raw= 184  filt=  80  V=0.061  media_1s=69.5  desvio=23.1
+raw= 356  filt= 310  V=0.235  media_1s=125.5  desvio=75.2
+raw=1690  filt=1325  V=1.003  media_1s=797.1  desvio=286.1
+raw=2630  filt=2383  V=1.804  media_1s=1820.2  desvio=323.3
+raw=4095  filt=3853  V=2.917  media_1s=3121.4  desvio=441.8
+raw=3999  filt=3998  V=3.027  media_1s=4030.6  desvio=38.5
+raw=4095  filt=4095  V=3.100  media_1s=3378.2  desvio=1149.4
+raw=4095  filt=4086  V=3.093  media_1s=4092.9  desvio=3.4
+raw=4095  filt=4050  V=3.066  media_1s=4082.0  desvio=14.9
+raw=3963  filt=4028  V=3.049  media_1s=4022.5  desvio=22.6
+raw=4095  filt=4010  V=3.036  media_1s=4015.0  desvio=56.4
+raw=3399  filt=3623  V=2.743  media_1s=3832.2  desvio=112.7
+raw=2970  filt=2999  V=2.270  media_1s=3362.9  desvio=193.7
+raw=1618  filt=1700  V=1.287  media_1s=2366.3  desvio=390.8
+raw=   0  filt= 317  V=0.240  media_1s=887.7  desvio=398.2
+raw=   0  filt=  14  V=0.011  media_1s=59.5  desvio=84.4
+raw=   0  filt=   9  V=0.007  media_1s=6.7  desvio=6.9
+raw= 116  filt=  31  V=0.023  media_1s=11.1  desvio=8.6
+raw=   0  filt=  12  V=0.009  media_1s=25.4  desvio=6.6
+raw=   0  filt=  15  V=0.011  media_1s=12.1  desvio=5.4
+raw=   0  filt=  33  V=0.025  media_1s=21.6  desvio=9.7
+raw=  74  filt=  62  V=0.047  media_1s=37.5  desvio=15.5
+raw= 275  filt= 128  V=0.097  media_1s=66.3  desvio=23.5
+raw=1331  filt=1045  V=0.791  media_1s=449.6  desvio=303.7
+raw=3946  filt=3099  V=2.346  media_1s=2078.0  desvio=565.2
+raw=3879  filt=4054  V=3.069  media_1s=3864.2  desvio=263.8
+raw=4095  filt=4005  V=3.032  media_1s=4037.8  desvio=19.5
+raw=4095  filt=4012  V=3.037  media_1s=4041.4  desvio=23.9
+raw=4095  filt=4044  V=3.061  media_1s=4041.4  desvio=16.5
+raw=4095  filt=4073  V=3.083  media_1s=4025.1  desvio=29.2
+raw=4091  filt=3891  V=2.946  media_1s=3976.7  desvio=64.7
+raw=3439  filt=3555  V=2.691  media_1s=3732.9  desvio=108.8
+raw=3161  filt=3029  V=2.293  media_1s=3279.5  desvio=158.0
+raw=1718  filt=1833  V=1.388  media_1s=2404.2  desvio=356.2
+raw= 369  filt= 750  V=0.568  media_1s=1239.8  desvio=290.9
+raw=   0  filt=  19  V=0.014  media_1s=257.3  desvio=213.2
+raw=   0  filt=  19  V=0.014  media_1s=30.2  desvio=7.9
+raw= 128  filt=  32  V=0.024  media_1s=12.2  desvio=9.8
+raw=  80  filt=  49  V=0.037  media_1s=30.6  desvio=10.0
+raw=   0  filt=   5  V=0.004  media_1s=22.2  desvio=10.6
+raw=   0  filt=  14  V=0.011  media_1s=20.6  desvio=10.9
+raw=   0  filt=  14  V=0.011  media_1s=13.1  desvio=6.7
+raw=  84  filt=  25  V=0.019  media_1s=21.0  desvio=8.3
+raw= 136  filt=  26  V=0.020  media_1s=28.6  desvio=14.0
+raw= 160  filt=  31  V=0.023  media_1s=28.4  desvio=11.6
+raw= 256  filt=  71  V=0.054  media_1s=48.2  desvio=14.1
+raw=1132  filt= 596  V=0.451  media_1s=207.2  desvio=158.7
+raw=2854  filt=2577  V=1.951  media_1s=1620.0  desvio=583.7
+raw=3869  filt=3961  V=2.999  media_1s=3706.2  desvio=462.3
+raw=4095  filt=4063  V=3.076  media_1s=4014.6  desvio=55.4
+raw=3959  filt=4010  V=3.036  media_1s=4026.7  desvio=33.7
+raw=4095  filt=4065  V=3.077  media_1s=4052.8  desvio=12.0
+raw=4095  filt=4035  V=3.055  media_1s=4006.8  desvio=24.1
+raw=4095  filt=3831  V=2.900  media_1s=3966.2  desvio=62.4
+raw=3113  filt=3157  V=2.390  media_1s=3584.3  desvio=277.4
+raw=1986  filt=2150  V=1.628  media_1s=2618.8  desvio=329.9
+raw=   0  filt= 296  V=0.224  media_1s=1264.1  desvio=571.4
+raw=   0  filt=  41  V=0.031  media_1s=39.5  desvio=52.4
+raw=  46  filt=  85  V=0.064  media_1s=26.1  desvio=27.3
+raw=   0  filt=   6  V=0.005  media_1s=24.8  desvio=21.6
+raw=   0  filt=   3  V=0.002  media_1s=12.5  desvio=4.6
+raw=   0  filt=  22  V=0.017  media_1s=14.9  desvio=6.6
+raw=   0  filt=   1  V=0.001  media_1s=18.1  desvio=12.0
+raw=  74  filt=  32  V=0.024  media_1s=13.3  desvio=6.1
+raw=   0  filt=  28  V=0.021  media_1s=21.6  desvio=6.3
+raw= 122  filt=  54  V=0.041  media_1s=30.6  desvio=11.2
+raw= 176  filt=  57  V=0.043  media_1s=63.4  desvio=12.6
+raw= 386  filt= 202  V=0.153  media_1s=105.7  desvio=36.6
+raw=1040  filt= 951  V=0.720  media_1s=521.7  desvio=227.4
+raw=2059  filt=1982  V=1.500  media_1s=1517.8  desvio=330.9
+raw=3773  filt=3177  V=2.405  media_1s=2618.8  desvio=368.2
+raw=4095  filt=4072  V=3.083  media_1s=3858.6  desvio=247.5
+raw=3827  filt=4029  V=3.050  media_1s=4027.6  desvio=18.2
+raw=4095  filt=3999  V=3.027  media_1s=4033.2  desvio=30.8
+raw=4027  filt=4024  V=3.046  media_1s=4043.8  desvio=29.4
+raw=3943  filt=4019  V=3.042  media_1s=4021.0  desvio=42.0
+raw=4095  filt=4095  V=3.100  media_1s=4039.2  desvio=33.5
+raw=4095  filt=4026  V=3.048  media_1s=4024.6  desvio=27.2
+raw=4095  filt=4012  V=3.037  media_1s=3991.7  desvio=24.2
+raw=3619  filt=3934  V=2.978  media_1s=3997.4  desvio=37.4
+raw=3679  filt=3733  V=2.826  media_1s=3909.1  desvio=93.4
+raw=3243  filt=3323  V=2.516  media_1s=3550.6  desvio=177.1
+raw=2426  filt=2423  V=1.834  media_1s=2901.7  desvio=284.0
+raw= 687  filt= 927  V=0.702  media_1s=1672.3  desvio=436.3
+raw=  84  filt=  10  V=0.008  media_1s=362.8  desvio=290.7
+raw=  80  filt=  12  V=0.009  media_1s=11.5  desvio=8.1
+raw=   0  filt=   6  V=0.005  media_1s=20.1  desvio=10.7
+raw=   0  filt=  40  V=0.030  media_1s=19.4  desvio=14.4
+raw=   0  filt=  18  V=0.014  media_1s=16.8  desvio=8.3
+raw=   0  filt=  30  V=0.023  media_1s=12.2  desvio=12.4
+raw=   0  filt=   3  V=0.002  media_1s=10.7  desvio=5.5
+raw=   0  filt=  31  V=0.023  media_1s=29.0  desvio=11.0
+raw=   0  filt=  48  V=0.036  media_1s=51.2  desvio=15.6
+raw=   0  filt=  25  V=0.019  media_1s=29.1  desvio=10.8
+raw=   0  filt=  42  V=0.032  media_1s=65.3  desvio=23.7
+raw= 144  filt=  46  V=0.035  media_1s=37.4  desvio=28.2
+raw= 332  filt= 220  V=0.167  media_1s=110.1  desvio=46.4
+raw=1012  filt= 831  V=0.629  media_1s=452.4  desvio=222.8
+raw=2210  filt=1810  V=1.370  media_1s=1301.2  desvio=281.6
+raw=3120  filt=2816  V=2.132  media_1s=2284.3  desvio=307.5
+raw=4095  filt=4027  V=3.049  media_1s=3530.9  desvio=384.4
+raw=4034  filt=4037  V=3.056  media_1s=4026.8  desvio=15.8
+raw=4095  filt=4055  V=3.070  media_1s=4046.1  desvio=34.5
+raw=4095  filt=4064  V=3.077  media_1s=4048.2  desvio=19.5
+raw=4095  filt=4083  V=3.091  media_1s=4077.9  desvio=6.0
+raw=4095  filt=4040  V=3.058  media_1s=4046.8  desvio=21.9
+raw=4039  filt=4062  V=3.075  media_1s=4044.8  desvio=29.3
+raw=4095  filt=4029  V=3.050  media_1s=4017.4  desvio=20.3
+raw=4095  filt=4041  V=3.059  media_1s=4017.6  desvio=33.9
+raw=3927  filt=4015  V=3.039  media_1s=4026.2  desvio=17.3
+raw=4016  filt=4009  V=3.035  media_1s=4016.6  desvio=18.5
+raw=3697  filt=3895  V=2.949  media_1s=3951.2  desvio=42.4
+raw=4095  filt=3711  V=2.809  media_1s=3762.2  desvio=80.0
+raw=3011  filt=3147  V=2.382  media_1s=3532.7  desvio=142.2
+raw=1619  filt=1707  V=1.292  media_1s=2310.8  desvio=394.3
+raw= 727  filt= 830  V=0.628  media_1s=1147.0  desvio=212.0
+raw=   0  filt= 156  V=0.118  media_1s=478.2  desvio=167.3
+raw=   0  filt=  29  V=0.022  media_1s=24.6  desvio=31.9
+raw=   0  filt=   0  V=0.000  media_1s=13.7  desvio=11.1
+raw=   0  filt=   4  V=0.003  media_1s=10.0  desvio=6.0
+raw= 128  filt=  61  V=0.046  media_1s=14.9  desvio=16.6
+raw=   0  filt=   1  V=0.001  media_1s=22.1  desvio=19.9
+raw=   0  filt=  17  V=0.013  media_1s=12.8  desvio=9.6
+raw= 112  filt=  34  V=0.026  media_1s=16.2  desvio=9.5
+raw=   0  filt=  17  V=0.013  media_1s=18.2  desvio=11.1
+raw=  16  filt=  38  V=0.029  media_1s=32.8  desvio=9.9
+raw=   0  filt=  29  V=0.022  media_1s=24.6  desvio=10.3
+raw=  40  filt=  65  V=0.049  media_1s=35.7  desvio=25.3
+raw= 173  filt= 138  V=0.104  media_1s=73.8  desvio=35.8
+raw= 576  filt= 266  V=0.201  media_1s=145.3  desvio=56.0
+raw=1567  filt=1308  V=0.990  media_1s=688.9  desvio=330.0
+raw=2752  filt=2494  V=1.888  media_1s=2025.7  desvio=350.9
+raw=4095  filt=3916  V=2.964  media_1s=3191.8  desvio=473.2
+raw=4095  filt=4071  V=3.082  media_1s=4043.6  desvio=25.6
+raw=4095  filt=4040  V=3.058  media_1s=4039.4  desvio=28.1
+raw=4095  filt=4069  V=3.080  media_1s=4028.5  desvio=29.4
+raw=3809  filt=4024  V=3.046  media_1s=4041.1  desvio=12.9
+raw=3583  filt=3949  V=2.989  media_1s=4011.6  desvio=24.8
+raw=3874  filt=3654  V=2.766  media_1s=3845.8  desvio=123.3
+raw=2776  filt=2869  V=2.172  media_1s=3274.1  desvio=221.8
+raw= 417  filt= 858  V=0.650  media_1s=1876.0  desvio=567.1
+raw=   0  filt=  13  V=0.010  media_1s=163.1  desvio=221.5
+raw=   0  filt=  29  V=0.022  media_1s=13.3  desvio=8.4
+raw=   0  filt=   2  V=0.002  media_1s=12.0  desvio=10.3
+raw=   0  filt=  18  V=0.014  media_1s=14.5  desvio=7.2
+raw=  64  filt=  22  V=0.017  media_1s=27.2  desvio=6.3
+raw= 112  filt=  54  V=0.041  media_1s=35.9  desvio=12.9
+raw= 192  filt= 166  V=0.126  media_1s=95.2  desvio=28.4
+raw=1131  filt= 690  V=0.522  media_1s=318.6  desvio=153.8
+raw=2416  filt=1991  V=1.507  media_1s=1370.8  desvio=383.0
+raw=4064  filt=3502  V=2.651  media_1s=2712.6  desvio=422.0
+raw=4095  filt=4040  V=3.058  media_1s=3943.7  desvio=125.1
+raw=3911  filt=4007  V=3.033  media_1s=4027.5  desvio=18.3
+raw=4095  filt=4021  V=3.044  media_1s=4024.7  desvio=17.0
+raw=4095  filt=4067  V=3.079  media_1s=4058.3  desvio=17.9
+raw=4095  filt=4029  V=3.050  media_1s=4034.8  desvio=29.4
+raw=4095  filt=4065  V=3.077  media_1s=4032.1  desvio=16.1
+raw=4095  filt=4053  V=3.068  media_1s=4044.3  desvio=17.9
+raw=4095  filt=4038  V=3.057  media_1s=4019.5  desvio=20.3
+raw=3934  filt=4000  V=3.028  media_1s=4066.3  desvio=28.0
+raw=3931  filt=3951  V=2.991  media_1s=4011.4  desvio=51.4
+raw=3655  filt=3828  V=2.898  media_1s=3929.8  desvio=106.7
+raw=3127  filt=3435  V=2.600  media_1s=3623.1  desvio=125.1
+raw=2193  filt=2335  V=1.768  media_1s=2919.2  desvio=334.1
+raw= 455  filt= 816  V=0.618  media_1s=1508.2  desvio=396.3
+raw=   0  filt=  28  V=0.021  media_1s=185.3  desvio=192.1
+raw=   0  filt=   6  V=0.005  media_1s=8.9  desvio=5.5
+raw=   0  filt=  21  V=0.016  media_1s=20.1  desvio=6.3
+raw=  24  filt=  10  V=0.008  media_1s=14.8  desvio=10.4
+raw=  16  filt=   3  V=0.002  media_1s=17.9  desvio=10.3
+raw=   0  filt=  20  V=0.015  media_1s=24.1  desvio=7.4
+raw=   0  filt= 102  V=0.077  media_1s=61.0  desvio=40.5
+raw=1888  filt=1457  V=1.103  media_1s=543.9  desvio=438.4
+raw=3999  filt=3998  V=3.027  media_1s=2901.2  desvio=795.0
+raw=4095  filt=3994  V=3.024  media_1s=4014.3  desvio=25.9
+raw=3759  filt=3997  V=3.026  media_1s=4046.7  desvio=28.2
+raw=4095  filt=4003  V=3.030  media_1s=4008.4  desvio=23.2
+raw=3968  filt=3939  V=2.982  media_1s=4013.4  desvio=37.3
+raw=3583  filt=3401  V=2.575  media_1s=3690.6  desvio=164.5
+raw= 911  filt=1413  V=1.070  media_1s=2509.8  desvio=627.1
+raw=   0  filt=  30  V=0.023  media_1s=398.1  desvio=424.3
+raw=   0  filt=   1  V=0.001  media_1s=16.9  desvio=12.3
+raw=  52  filt=  19  V=0.014  media_1s=13.5  desvio=6.0
+raw=   0  filt=  16  V=0.012  media_1s=12.0  desvio=3.9
+raw=   0  filt=  46  V=0.035  media_1s=19.4  desvio=17.8
+raw= 208  filt=  79  V=0.060  media_1s=48.2  desvio=16.4
+raw= 195  filt=  73  V=0.055  media_1s=56.2  desvio=14.9
+raw=  62  filt= 112  V=0.085  media_1s=87.2  desvio=21.7
+raw=1041  filt= 686  V=0.519  media_1s=330.6  desvio=165.1
+raw=1983  filt=1855  V=1.404  media_1s=1304.2  desvio=358.9
+raw=3487  filt=3275  V=2.479  media_1s=2643.3  desvio=406.1
+raw=3765  filt=4053  V=3.068  media_1s=3939.2  desvio=221.3
+raw=4095  filt=3967  V=3.003  media_1s=4041.0  desvio=42.5
+raw=4095  filt=4095  V=3.100  media_1s=4041.1  desvio=54.3
+raw=4095  filt=4095  V=3.100  media_1s=4014.3  desvio=68.8
+raw=4095  filt=4054  V=3.069  media_1s=4072.8  desvio=20.4
+raw=4095  filt=4039  V=3.058  media_1s=4039.2  desvio=16.5
+raw=4095  filt=4071  V=3.082  media_1s=4021.1  desvio=34.6
+raw=3633  filt=3846  V=2.912  media_1s=3989.6  desvio=61.8
+raw=3344  filt=3633  V=2.750  media_1s=3748.4  desvio=84.0
+raw=1831  filt=2440  V=1.847  media_1s=3107.8  desvio=333.1
+raw=   9  filt= 414  V=0.313  media_1s=1448.7  desvio=589.7
+raw=   0  filt=  10  V=0.008  media_1s=61.8  desvio=93.6
+raw=  16  filt=  26  V=0.020  media_1s=12.8  desvio=9.2
+raw=  88  filt=  26  V=0.020  media_1s=24.2  desvio=8.3
+raw= 105  filt=  27  V=0.020  media_1s=13.5  desvio=5.8
+raw=   0  filt=  23  V=0.017  media_1s=18.4  desvio=7.0
+raw=   0  filt=  52  V=0.039  media_1s=49.4  desvio=15.1
+raw= 995  filt= 513  V=0.388  media_1s=209.0  desvio=132.3
+raw=2821  filt=2489  V=1.884  media_1s=1562.2  desvio=566.1
+raw=4095  filt=4080  V=3.089  media_1s=3588.4  desvio=488.0
+raw=4095  filt=4052  V=3.067  media_1s=4042.0  desvio=30.0
+raw=4095  filt=4056  V=3.070  media_1s=4028.6  desvio=39.4
+raw=4095  filt=4047  V=3.064  media_1s=4011.7  desvio=23.0
+raw=3933  filt=4065  V=3.077  media_1s=4016.7  desvio=32.6
+raw=3987  filt=3942  V=2.984  media_1s=3993.6  desvio=54.8
+raw=3125  filt=3418  V=2.587  media_1s=3664.7  desvio=144.5
+raw=2113  filt=2342  V=1.773  media_1s=2923.0  desvio=317.0
+raw= 737  filt= 908  V=0.687  media_1s=1594.4  desvio=408.4
+raw=   0  filt=   5  V=0.004  media_1s=279.8  desvio=260.9
+raw=   0  filt=  20  V=0.015  media_1s=11.4  desvio=8.0
+raw=   0  filt=  31  V=0.023  media_1s=30.7  desvio=18.1
+raw= 128  filt=  56  V=0.042  media_1s=28.6  desvio=20.9
+raw=  20  filt=   7  V=0.005  media_1s=31.9  desvio=12.7
+raw=   0  filt=   2  V=0.002  media_1s=12.1  desvio=3.9
+raw=   0  filt=  37  V=0.028  media_1s=20.2  desvio=8.9
+raw=   0  filt=  23  V=0.017  media_1s=20.8  desvio=8.3
+raw=   0  filt=   9  V=0.007  media_1s=30.6  desvio=15.4
+raw=   0  filt=  33  V=0.025  media_1s=28.9  desvio=8.2
+raw=   0  filt=  52  V=0.039  media_1s=48.7  desvio=14.7
+raw=   0  filt= 154  V=0.117  media_1s=83.2  desvio=52.9
+raw= 599  filt= 628  V=0.475  media_1s=342.2  desvio=185.4
+raw=1972  filt=1562  V=1.182  media_1s=1077.9  desvio=284.5
+raw=3051  filt=2993  V=2.266  media_1s=2314.2  desvio=427.6
+raw=4095  filt=4030  V=3.051  media_1s=3847.1  desvio=272.8
+raw=3935  filt=4047  V=3.064  media_1s=4021.1  desvio=29.3
+raw=4095  filt=4049  V=3.065  media_1s=4051.0  desvio=15.2
+raw=4095  filt=4062  V=3.075  media_1s=4053.8  desvio=14.8
+raw=4095  filt=4045  V=3.062  media_1s=4057.4  desvio=13.7
+raw=4035  filt=4078  V=3.087  media_1s=4020.1  desvio=61.6
+raw=3935  filt=3945  V=2.986  media_1s=3987.1  desvio=55.1
+raw=3341  filt=3512  V=2.659  media_1s=3817.7  desvio=164.9
+raw=2431  filt=2804  V=2.123  media_1s=3201.0  desvio=225.6
+raw=1594  filt=1608  V=1.217  media_1s=2168.9  desvio=348.6
+raw= 194  filt= 343  V=0.260  media_1s=901.8  desvio=350.8
+raw=   0  filt=   9  V=0.007  media_1s=68.3  desvio=93.9
+raw=  16  filt=   2  V=0.002  media_1s=16.9  desvio=14.5
+raw=   0  filt=  25  V=0.019  media_1s=14.4  desvio=11.5
+raw=  80  filt=  13  V=0.010  media_1s=14.9  desvio=9.1
+raw=   0  filt=  16  V=0.012  media_1s=22.2  desvio=6.4
+raw=   0  filt=  18  V=0.014  media_1s=11.5  desvio=7.7
+raw=   0  filt=   6  V=0.005  media_1s=7.7  desvio=6.8
+raw=   0  filt=   8  V=0.006  media_1s=9.4  desvio=4.1
+raw=   0  filt=  18  V=0.014  media_1s=15.3  desvio=4.4
+raw=   0  filt=  19  V=0.014  media_1s=13.0  desvio=8.4
+raw=   0  filt=  13  V=0.010  media_1s=27.1  desvio=20.3
+raw=   0  filt=  16  V=0.012  media_1s=16.2  desvio=5.4
+raw=   0  filt=  14  V=0.011  media_1s=19.3  desvio=6.2
+raw=   0  filt=  47  V=0.036  media_1s=31.9  desvio=14.3
+raw=   0  filt=  35  V=0.026  media_1s=39.3  desvio=10.9
+raw=   0  filt=  53  V=0.040  media_1s=53.0  desvio=17.4
+raw= 129  filt= 122  V=0.092  media_1s=93.4  desvio=23.9
+raw= 303  filt= 209  V=0.158  media_1s=162.3  desvio=23.8
+raw= 866  filt= 629  V=0.476  media_1s=411.5  desvio=122.9
+raw=1350  filt=1111  V=0.841  media_1s=867.8  desvio=133.5
+raw=1915  filt=1625  V=1.230  media_1s=1420.1  desvio=154.7
+raw=2381  filt=2294  V=1.737  media_1s=1916.3  desvio=180.8
+raw=3254  filt=3014  V=2.282  media_1s=2692.1  desvio=169.5
+raw=3936  filt=3654  V=2.766  media_1s=3295.4  desvio=229.1
+raw=3975  filt=3978  V=3.011  media_1s=3857.8  desvio=147.7
+raw=4095  filt=4064  V=3.077  media_1s=4022.2  desvio=24.3
+raw=4095  filt=4049  V=3.065  media_1s=4017.9  desvio=23.7
+raw=4095  filt=4005  V=3.032  media_1s=4036.3  desvio=20.8
+raw=4095  filt=4069  V=3.080  media_1s=4033.8  desvio=20.3
+raw=4095  filt=4040  V=3.058  media_1s=4017.6  desvio=26.8
+raw=4031  filt=3993  V=3.023  media_1s=4063.5  desvio=32.1
+raw=4095  filt=4095  V=3.100  media_1s=4057.3  desvio=45.4
+raw=4095  filt=3997  V=3.026  media_1s=4063.8  desvio=42.6
+raw=4095  filt=3907  V=2.958  media_1s=4001.8  desvio=57.6
+raw=3233  filt=3586  V=2.715  media_1s=3834.0  desvio=100.1
+raw=1280  filt=1491  V=1.129  media_1s=2583.2  desvio=594.7
+raw=   0  filt=   9  V=0.007  media_1s=447.1  desvio=462.2
+raw=   0  filt=  31  V=0.023  media_1s=31.4  desvio=15.2
+raw=   0  filt=  15  V=0.011  media_1s=10.9  desvio=8.6
+raw= 144  filt=  29  V=0.022  media_1s=24.0  desvio=17.0
+raw=   0  filt=  69  V=0.052  media_1s=43.3  desvio=14.0
+raw= 316  filt= 213  V=0.161  media_1s=94.1  desvio=46.9
+raw=1939  filt=1615  V=1.223  media_1s=870.2  desvio=473.9
+raw=4095  filt=3640  V=2.756  media_1s=2640.3  desvio=552.4
+raw=4095  filt=4095  V=3.100  media_1s=4009.7  desvio=81.2
+raw=4095  filt=4059  V=3.073  media_1s=4066.6  desvio=11.4
+raw=4095  filt=4045  V=3.062  media_1s=4051.3  desvio=12.3
+raw=4095  filt=3998  V=3.027  media_1s=4054.8  desvio=22.3
+raw=4095  filt=4029  V=3.050  media_1s=4025.2  desvio=20.3
+raw=4095  filt=4048  V=3.064  media_1s=4039.8  desvio=20.4
+raw=3703  filt=3976  V=3.010  media_1s=4028.4  desvio=23.5
+raw=4095  filt=3959  V=2.997  media_1s=4011.8  desvio=22.8
+raw=4095  filt=3945  V=2.986  media_1s=3958.5  desvio=24.8
+raw=3936  filt=3792  V=2.871  media_1s=3869.5  desvio=67.1
+raw=3106  filt=3434  V=2.600  media_1s=3577.4  desvio=85.4
+raw=2352  filt=2471  V=1.871  media_1s=2916.4  desvio=272.0
+raw=1232  filt=1271  V=0.962  media_1s=1866.7  desvio=349.0
+raw=   0  filt=  34  V=0.026  media_1s=619.3  desvio=428.7
+raw=   0  filt=  32  V=0.024  media_1s=13.8  desvio=9.1
+raw=   0  filt=   0  V=0.000  media_1s=21.5  desvio=12.3
+raw=  48  filt=  27  V=0.020  media_1s=14.4  desvio=8.5
+raw=   0  filt=   6  V=0.005  media_1s=14.5  desvio=12.3
+raw=   0  filt=   2  V=0.002  media_1s=14.4  desvio=8.5
+raw=  48  filt=  12  V=0.009  media_1s=4.4  desvio=3.6

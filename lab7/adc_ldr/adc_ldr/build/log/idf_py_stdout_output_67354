@@ -1,0 +1,132 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15532
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (29) boot: ESP-IDF v5.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 21 2026 14:45:11[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v3.1[0m
+[0;32mI (37) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (60) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (67) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (75) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (82) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (90) boot: End of partition table[0m
+[0;32mI (94) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09c54h ( 40020) map[0m
+[0;32mI (116) esp_image: segment 1: paddr=00019c7c vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (116) esp_image: segment 2: paddr=00019c88 vaddr=3ffb0000 size=0220ch (  8716) load[0m
+[0;32mI (125) esp_image: segment 3: paddr=0001be9c vaddr=40080000 size=0417ch ( 16764) load[0m
+[0;32mI (137) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=14b2ch ( 84780) map[0m
+[0;32mI (168) esp_image: segment 5: paddr=00034b54 vaddr=4008417c size=0864ch ( 34380) load[0m
+[0;32mI (188) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (188) boot: Disabling RNG early entropy source...[0m
+[0;32mI (199) cpu_start: Multicore app[0m
+[0;32mI (208) cpu_start: Pro cpu start user code[0m
+[0;32mI (208) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (208) cpu_start: Application information:[0m
+[0;32mI (211) cpu_start: Project name:     adc_ldr[0m
+[0;32mI (216) cpu_start: App version:      c04a3bf[0m
+[0;32mI (221) cpu_start: Compile time:     Oct 21 2026 14:45:05[0m
+[0;32mI (227) cpu_start: ELF file SHA256:  8bfbba53d...[0m
+[0;32mI (233) cpu_start: ESP-IDF:          v5.2[0m
+[0;32mI (237) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (242) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (247) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (252) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (259) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFB2AF8 len 0002D508 (181 KiB): DRAM[0m
+[0;32mI (271) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (277) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (284) heap_init: At 4008C7C8 len 00013838 (78 KiB): IRAM[0m
+[0;32mI (292) spi_flash: detected chip: generic[0m
+[0;32mI (295) spi_flash: flash io: dio[0m
+[0;33mW (299) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (312) main_task: Started on CPU0[0m
+[0;32mI (322) main_task: Calling app_main()[0m
+raw=2731  filt=2730  V=2.067  media_1s=2252.0  desvio=766.3
+raw=2734  filt=2733  V=2.069  media_1s=2732.4  desvio=1.1
+raw=2722  filt=2729  V=2.066  media_1s=2733.1  desvio=1.6
+raw=2721  filt=2719  V=2.058  media_1s=2722.2  desvio=3.5
+raw=2734  filt=2742  V=2.076  media_1s=2734.4  desvio=7.0
+raw=2749  filt=2744  V=2.077  media_1s=2740.4  desvio=2.2
+raw=2743  filt=2739  V=2.073  media_1s=2740.9  desvio=2.8
+raw=2746  filt=2746  V=2.079  media_1s=2742.8  desvio=2.4
+raw=2754  filt=2757  V=2.087  media_1s=2752.7  desvio=2.9
+raw=2752  filt=2754  V=2.085  media_1s=2756.9  desvio=1.2
+raw=2745  filt=2756  V=2.086  media_1s=2755.6  desvio=1.1
+raw=2743  filt=2751  V=2.083  media_1s=2752.2  desvio=1.5
+raw=2757  filt=2759  V=2.089  media_1s=2753.9  desvio=3.8
+raw=2755  filt=2755  V=2.086  media_1s=2757.3  desvio=1.6
+raw=2754  filt=2753  V=2.084  media_1s=2756.1  desvio=1.5
+raw=2757  filt=2753  V=2.084  media_1s=2756.7  desvio=1.7
+raw=2755  filt=2753  V=2.084  media_1s=2752.7  desvio=1.6
+raw=2757  filt=2748  V=2.080  media_1s=2749.2  desvio=1.7
+raw=2743  filt=2747  V=2.080  media_1s=2750.3  desvio=2.0
+raw=2747  filt=2747  V=2.080  media_1s=2747.2  desvio=0.9
+raw=2741  filt=2744  V=2.077  media_1s=2744.6  desvio=0.9
+raw=2748  filt=2745  V=2.078  media_1s=2745.5  desvio=1.0
+raw=2747  filt=2749  V=2.081  media_1s=2748.1  desvio=1.0
+raw=2701  filt=2718  V=2.058  media_1s=2741.3  desvio=9.8
+raw=2713  filt=2711  V=2.052  media_1s=2709.4  desvio=1.8
+raw=2723  filt=2724  V=2.062  media_1s=2717.2  desvio=4.0
+raw=2731  filt=2733  V=2.069  media_1s=2728.1  desvio=3.4
+raw=2743  filt=2738  V=2.073  media_1s=2735.7  desvio=1.5
+raw=2741  filt=2736  V=2.071  media_1s=2738.2  desvio=1.3
+raw=2714  filt=2723  V=2.061  media_1s=2729.7  desvio=3.1
+raw=2701  filt=2704  V=2.047  media_1s=2713.4  desvio=5.3
+raw=2704  filt=2698  V=2.042  media_1s=2699.4  desvio=2.6
+raw=2704  filt=2705  V=2.048  media_1s=2700.6  desvio=2.2
+raw=2717  filt=2712  V=2.053  media_1s=2708.1  desvio=2.9
+raw=2735  filt=2730  V=2.067  media_1s=2723.2  desvio=5.0
+raw=2747  filt=2739  V=2.073  media_1s=2736.2  desvio=2.2
+raw=2721  filt=2736  V=2.071  media_1s=2738.8  desvio=1.3
+raw=2721  filt=2725  V=2.063  media_1s=2731.8  desvio=3.7
+raw=2703  filt=2712  V=2.053  media_1s=2718.9  desvio=3.9
+raw=2699  filt=2703  V=2.046  media_1s=2706.4  desvio=2.4
+raw=2704  filt=2697  V=2.042  media_1s=2700.2  desvio=2.3
+raw=2704  filt=2701  V=2.045  media_1s=2698.4  desvio=1.4
+raw=2711  filt=2704  V=2.047  media_1s=2702.6  desvio=1.2
+raw=2721  filt=2707  V=2.049  media_1s=2703.5  desvio=2.6
+raw=2706  filt=2712  V=2.053  media_1s=2711.2  desvio=2.2
+raw=2721  filt=2719  V=2.058  media_1s=2716.0  desvio=2.7
+raw=2735  filt=2728  V=2.065  media_1s=2724.7  desvio=2.1
+raw=2742  filt=2735  V=2.070  media_1s=2731.7  desvio=3.1
+raw=2747  filt=2742  V=2.076  media_1s=2738.8  desvio=3.1
+raw=2736  filt=2739  V=2.073  media_1s=2741.1  desvio=1.2
+raw=2725  filt=2733  V=2.069  media_1s=2735.2  desvio=2.0
+raw=2723  filt=2725  V=2.063  media_1s=2727.3  desvio=2.9
+raw=2719  filt=2712  V=2.053  media_1s=2717.1  desvio=4.0
+raw=2702  filt=2703  V=2.046  media_1s=2706.3  desvio=2.6
+raw=2690  filt=2700  V=2.044  media_1s=2700.4  desvio=1.8
+raw=2700  filt=2698  V=2.042  media_1s=2698.8  desvio=1.7
+raw=2708  filt=2703  V=2.046  media_1s=2703.8  desvio=1.9
+raw=2709  filt=2711  V=2.052  media_1s=2707.9  desvio=2.2
+raw=2723  filt=2724  V=2.062  media_1s=2717.8  desvio=5.1
+raw=2740  filt=2733  V=2.069  media_1s=2728.5  desvio=2.4
+raw=2741  filt=2746  V=2.079  media_1s=2741.7  desvio=3.9
+raw=2735  filt=2747  V=2.080  media_1s=2746.7  desvio=2.0
+raw=2735  filt=2736  V=2.071  media_1s=2738.8  desvio=3.2
+raw=2723  filt=2720  V=2.059  media_1s=2727.7  desvio=4.3
+raw=2723  filt=2711  V=2.052  media_1s=2714.8  desvio=3.8
+raw=2704  filt=2709  V=2.051  media_1s=2710.2  desvio=1.4
+raw=2717  filt=2716  V=2.056  media_1s=2712.3  desvio=2.2
+raw=2720  filt=2723  V=2.061  media_1s=2717.0  desvio=3.4
+raw=2739  filt=2736  V=2.071  media_1s=2729.7  desvio=4.5
+raw=2741  filt=2749  V=2.081  media_1s=2743.8  desvio=3.8
+raw=2738  filt=2748  V=2.080  media_1s=2749.3  desvio=0.9
+raw=2722  filt=2730  V=2.067  media_1s=2739.4  desvio=5.3
+raw=2725  filt=2716  V=2.056  media_1s=2722.1  desvio=4.8
+raw=2725  filt=2714  V=2.055  media_1s=2711.9  desvio=2.6
+raw=2714  filt=2713  V=2.054  media_1s=2712.6  desvio=0.9
+raw=2725  filt=2723  V=2.061  media_1s=2718.6  desvio=3.4
